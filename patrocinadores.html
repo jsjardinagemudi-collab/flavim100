@@ -1,0 +1,549 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#07111f">
+
+  <title>Patrocinadores • Flavim Junior 100</title>
+  <meta name="description" content="Conheça os parceiros e patrocinadores que apoiam o piloto Flavim Junior 100 no motocross.">
+  <link rel="canonical" href="https://flavim100.com.br/patrocinadores.html">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Patrocinadores • Flavim Junior 100">
+  <meta property="og:description" content="As marcas que aceleram junto com o Flavim Junior 100.">
+  <meta property="og:url" content="https://flavim100.com.br/patrocinadores.html">
+
+  <style>
+    :root{
+      --bg:#050b13;
+      --bg-2:#0a1625;
+      --card:#0e1c2d;
+      --blue:#138cff;
+      --blue-2:#58b8ff;
+      --white:#f5f9ff;
+      --muted:#a8b6c9;
+      --line:rgba(88,184,255,.2);
+      --shadow:0 22px 60px rgba(0,0,0,.38);
+      --radius:24px;
+    }
+
+    *{box-sizing:border-box}
+
+    html{scroll-behavior:smooth}
+
+    body{
+      margin:0;
+      color:var(--white);
+      background:
+        radial-gradient(circle at 75% 0%, rgba(19,140,255,.18), transparent 34rem),
+        linear-gradient(145deg, var(--bg), #07111e 48%, #03070c);
+      font-family:Inter,Segoe UI,Arial,sans-serif;
+      line-height:1.6;
+      min-height:100vh;
+    }
+
+    a{color:inherit}
+
+    img{
+      display:block;
+      max-width:100%;
+    }
+
+    .container{
+      width:min(1160px, calc(100% - 36px));
+      margin-inline:auto;
+    }
+
+    .site-header{
+      position:sticky;
+      top:0;
+      z-index:20;
+      border-bottom:1px solid rgba(255,255,255,.08);
+      background:rgba(5,11,19,.84);
+      backdrop-filter:blur(16px);
+    }
+
+    .nav{
+      min-height:76px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:20px;
+    }
+
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:12px;
+      text-decoration:none;
+      font-weight:900;
+      letter-spacing:.03em;
+    }
+
+    .brand-mark{
+      display:grid;
+      place-items:center;
+      width:48px;
+      aspect-ratio:1;
+      border:1px solid rgba(255,255,255,.22);
+      border-radius:15px;
+      background:linear-gradient(145deg,#193552,#07111f);
+      color:var(--blue-2);
+      box-shadow:inset 0 1px rgba(255,255,255,.16),0 0 28px rgba(19,140,255,.18);
+      font-size:1.25rem;
+      font-style:italic;
+    }
+
+    .brand-text small{
+      display:block;
+      color:var(--blue-2);
+      font-size:.67rem;
+      letter-spacing:.2em;
+      line-height:1.2;
+    }
+
+    .home-link{
+      padding:10px 16px;
+      border:1px solid var(--line);
+      border-radius:999px;
+      color:#dcecff;
+      text-decoration:none;
+      font-weight:800;
+      font-size:.9rem;
+      transition:.2s ease;
+    }
+
+    .home-link:hover{
+      border-color:var(--blue);
+      background:rgba(19,140,255,.1);
+      transform:translateY(-2px);
+    }
+
+    .hero{
+      position:relative;
+      overflow:hidden;
+      padding:100px 0 78px;
+      text-align:center;
+    }
+
+    .hero::after{
+      content:"100";
+      position:absolute;
+      z-index:-1;
+      inset:50% auto auto 50%;
+      translate:-50% -50%;
+      color:rgba(255,255,255,.025);
+      font-size:clamp(13rem,35vw,31rem);
+      font-weight:1000;
+      font-style:italic;
+      line-height:1;
+      letter-spacing:-.12em;
+      pointer-events:none;
+    }
+
+    .eyebrow{
+      display:inline-flex;
+      align-items:center;
+      gap:9px;
+      margin:0 0 18px;
+      color:var(--blue-2);
+      font-size:.78rem;
+      font-weight:900;
+      letter-spacing:.2em;
+      text-transform:uppercase;
+    }
+
+    .eyebrow::before,
+    .eyebrow::after{
+      content:"";
+      width:34px;
+      height:2px;
+      background:linear-gradient(90deg,transparent,var(--blue));
+    }
+
+    .eyebrow::after{transform:scaleX(-1)}
+
+    h1{
+      max-width:900px;
+      margin:0 auto;
+      font-size:clamp(2.6rem,7vw,5.6rem);
+      line-height:.95;
+      letter-spacing:-.055em;
+      text-transform:uppercase;
+      font-style:italic;
+    }
+
+    h1 span{
+      display:block;
+      color:var(--blue-2);
+      text-shadow:0 0 34px rgba(19,140,255,.28);
+    }
+
+    .hero-copy{
+      max-width:690px;
+      margin:26px auto 0;
+      color:var(--muted);
+      font-size:clamp(1rem,2vw,1.18rem);
+    }
+
+    .section{
+      padding:30px 0 90px;
+    }
+
+    .section-head{
+      display:flex;
+      align-items:end;
+      justify-content:space-between;
+      gap:24px;
+      margin-bottom:30px;
+    }
+
+    .section-head h2{
+      margin:0;
+      font-size:clamp(1.8rem,4vw,3rem);
+      line-height:1.05;
+      letter-spacing:-.035em;
+      text-transform:uppercase;
+      font-style:italic;
+    }
+
+    .section-head p{
+      max-width:520px;
+      margin:0;
+      color:var(--muted);
+    }
+
+    .sponsor-grid{
+      display:grid;
+      grid-template-columns:repeat(2,minmax(0,1fr));
+      gap:22px;
+    }
+
+    .sponsor{
+      position:relative;
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+      min-height:420px;
+      padding:26px;
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      background:
+        linear-gradient(145deg,rgba(255,255,255,.045),transparent 40%),
+        var(--card);
+      box-shadow:var(--shadow);
+      transition:transform .25s ease,border-color .25s ease;
+    }
+
+    .sponsor::before{
+      content:"";
+      position:absolute;
+      top:0;
+      left:0;
+      width:100%;
+      height:4px;
+      background:linear-gradient(90deg,var(--blue),var(--blue-2),transparent);
+    }
+
+    .sponsor:hover{
+      transform:translateY(-6px);
+      border-color:rgba(88,184,255,.55);
+    }
+
+    .logo-box{
+      display:grid;
+      place-items:center;
+      min-height:158px;
+      margin-bottom:24px;
+      padding:22px;
+      border:1px solid rgba(255,255,255,.1);
+      border-radius:19px;
+      background:
+        radial-gradient(circle at 50% 0%,rgba(19,140,255,.15),transparent 65%),
+        #f6f8fb;
+    }
+
+    .logo-box img{
+      width:auto;
+      max-width:100%;
+      max-height:112px;
+      object-fit:contain;
+    }
+
+    .logo-fallback{
+      display:none;
+      color:#08111d;
+      text-align:center;
+      font-size:1.45rem;
+      font-weight:1000;
+      letter-spacing:-.03em;
+      text-transform:uppercase;
+    }
+
+    .sponsor-label{
+      margin:0 0 7px;
+      color:var(--blue-2);
+      font-size:.72rem;
+      font-weight:900;
+      letter-spacing:.15em;
+      text-transform:uppercase;
+    }
+
+    .sponsor h3{
+      margin:0 0 10px;
+      font-size:1.62rem;
+      line-height:1.1;
+    }
+
+    .sponsor p{
+      margin:0 0 22px;
+      color:var(--muted);
+    }
+
+    .card-link{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      align-self:flex-start;
+      gap:8px;
+      margin-top:auto;
+      padding:11px 17px;
+      border-radius:12px;
+      background:linear-gradient(135deg,#0b6fd3,var(--blue));
+      color:white;
+      text-decoration:none;
+      font-weight:900;
+      box-shadow:0 10px 26px rgba(19,140,255,.22);
+    }
+
+    .card-link:hover{filter:brightness(1.12)}
+
+    .neutral-badge{
+      display:inline-flex;
+      align-items:center;
+      align-self:flex-start;
+      gap:8px;
+      margin-top:auto;
+      padding:9px 13px;
+      border:1px solid rgba(255,255,255,.13);
+      border-radius:999px;
+      color:#c9d6e6;
+      font-size:.82rem;
+      font-weight:800;
+    }
+
+    .cta{
+      overflow:hidden;
+      position:relative;
+      margin:0 auto 90px;
+      padding:48px;
+      border:1px solid rgba(88,184,255,.35);
+      border-radius:30px;
+      background:
+        linear-gradient(120deg,rgba(19,140,255,.22),transparent 55%),
+        #0b1727;
+      box-shadow:var(--shadow);
+    }
+
+    .cta::after{
+      content:"100";
+      position:absolute;
+      right:-20px;
+      bottom:-46px;
+      color:rgba(255,255,255,.055);
+      font-size:11rem;
+      font-weight:1000;
+      font-style:italic;
+      line-height:1;
+    }
+
+    .cta-content{position:relative;z-index:1;max-width:700px}
+
+    .cta h2{
+      margin:0 0 14px;
+      font-size:clamp(2rem,5vw,3.5rem);
+      line-height:1;
+      letter-spacing:-.04em;
+      text-transform:uppercase;
+      font-style:italic;
+    }
+
+    .cta p{margin:0 0 25px;color:#c0ccda}
+
+    .cta-actions{
+      display:flex;
+      flex-wrap:wrap;
+      gap:12px;
+    }
+
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      padding:13px 20px;
+      border-radius:13px;
+      text-decoration:none;
+      font-weight:900;
+    }
+
+    .btn-primary{background:var(--blue);color:white}
+    .btn-secondary{border:1px solid rgba(255,255,255,.2);background:rgba(255,255,255,.05)}
+
+    footer{
+      padding:30px 0;
+      border-top:1px solid rgba(255,255,255,.08);
+      color:#8291a5;
+      text-align:center;
+      font-size:.88rem;
+    }
+
+    @media (max-width:760px){
+      .nav{min-height:68px}
+      .brand-text{font-size:.86rem}
+      .home-link{padding:9px 12px}
+      .hero{padding:76px 0 56px}
+      .section{padding-bottom:70px}
+      .section-head{display:block}
+      .section-head p{margin-top:12px}
+      .sponsor-grid{grid-template-columns:1fr}
+      .sponsor{min-height:390px}
+      .cta{padding:34px 25px}
+    }
+  </style>
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="https://flavim100.com.br/" aria-label="Voltar para a página inicial">
+        <span class="brand-mark">100</span>
+        <span class="brand-text">
+          Flavim Junior
+          <small>Motocross</small>
+        </span>
+      </a>
+      <a class="home-link" href="https://flavim100.com.br/">← Página inicial</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <p class="eyebrow">Parceiros oficiais</p>
+        <h1>Quem acelera <span>com o Flavim</span></h1>
+        <p class="hero-copy">
+          Cada treino, largada e conquista também carrega a confiança de empresas
+          que acreditam no esporte, no trabalho e na trajetória do Flavim Junior 100.
+        </p>
+      </div>
+    </section>
+
+    <section class="section" id="patrocinadores">
+      <div class="container">
+        <div class="section-head">
+          <h2>Patrocinadores atuais</h2>
+          <p>Conheça as marcas que fazem parte da equipe e ajudam este projeto a continuar avançando.</p>
+        </div>
+
+        <div class="sponsor-grid">
+          <article class="sponsor">
+            <div class="logo-box">
+              <img src="imagens/logo-flavim-insulfilm.png"
+                   alt="Logomarca Flavim Insulfilm"
+                   onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+              <span class="logo-fallback">Flavim Insulfilm</span>
+            </div>
+            <p class="sponsor-label">Películas e proteção automotiva</p>
+            <h3>Flavim Insulfilm</h3>
+            <p>
+              Parceiro local ligado ao cuidado, proteção e acabamento automotivo,
+              apoiando o Flavim dentro e fora das pistas.
+            </p>
+            <span class="neutral-badge">Parceiro Flavim 100</span>
+          </article>
+
+          <article class="sponsor">
+            <div class="logo-box">
+              <img src="imagens/logo-jardinagemudi.png"
+                   alt="Logomarca JardinagemUdi.com.br"
+                   onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+              <span class="logo-fallback">JardinagemUdi.com.br</span>
+            </div>
+            <p class="sponsor-label">Serviços e soluções</p>
+            <h3>JardinagemUdi.com.br</h3>
+            <p>
+              Plataforma de serviços em Uberlândia que conecta clientes e profissionais,
+              incentivando trabalho, oportunidade e desenvolvimento local.
+            </p>
+            <a class="card-link" href="https://jardinagemudi.com.br/" target="_blank" rel="noopener">
+              Conhecer o site ↗
+            </a>
+          </article>
+
+          <article class="sponsor">
+            <div class="logo-box">
+              <img src="imagens/logo-elite.png"
+                   alt="Logomarca Elite"
+                   onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+              <span class="logo-fallback">◆ Elite</span>
+            </div>
+            <p class="sponsor-label">Marca parceira</p>
+            <h3>Elite</h3>
+            <p>
+              A identidade Elite integra o time de apoiadores do projeto Flavim Junior 100,
+              fortalecendo a presença das parcerias locais.
+            </p>
+            <span class="neutral-badge">Parceiro Flavim 100</span>
+          </article>
+
+          <article class="sponsor">
+            <div class="logo-box">
+              <img src="imagens/logo-ecovida-horizontal.jpeg"
+                   alt="Logomarca Instituto EcoVida"
+                   onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+              <span class="logo-fallback">Instituto EcoVida</span>
+            </div>
+            <p class="sponsor-label">Impacto social e ambiental</p>
+            <h3>Instituto EcoVida</h3>
+            <p>
+              Iniciativa voltada à mobilização comunitária, reciclagem e ações
+              que geram cuidado com as pessoas e com os espaços da cidade.
+            </p>
+            <a class="card-link" href="https://jardinagemudi.com.br/ecovida.html" target="_blank" rel="noopener">
+              Conhecer o projeto ↗
+            </a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="container cta">
+      <div class="cta-content">
+        <p class="eyebrow">Sua marca na pista</p>
+        <h2>Quer patrocinar o Flavim?</h2>
+        <p>
+          Faça parte da trajetória do Flavim Junior 100 e apresente sua empresa
+          ao público do motocross, das competições e das redes sociais.
+        </p>
+        <div class="cta-actions">
+          <a class="btn btn-primary" href="patrocinio.html">Ver oportunidades</a>
+          <a class="btn btn-secondary" href="https://www.instagram.com/eaiflavim/" target="_blank" rel="noopener">
+            Instagram @eaiflavim
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      © <span id="ano"></span> Flavim Junior 100 • Uberlândia–MG • flavim100.com.br
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("ano").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
