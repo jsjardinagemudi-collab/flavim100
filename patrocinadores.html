@@ -13,6 +13,7 @@
   <meta property="og:title" content="Patrocinadores • Flavim Junior 100">
   <meta property="og:description" content="As marcas que aceleram junto com o Flavim Junior 100.">
   <meta property="og:url" content="https://flavim100.com.br/patrocinadores.html">
+  <meta property="og:image" content="https://flavim100.com.br/imagens/capa.png">
 
   <style>
     :root{
@@ -41,6 +42,26 @@
       font-family:Inter,Segoe UI,Arial,sans-serif;
       line-height:1.6;
       min-height:100vh;
+    }
+
+    body::before{
+      content:"";
+      position:fixed;
+      inset:0;
+      z-index:-2;
+      background:url("imagens/capa.png") center top / cover no-repeat;
+      opacity:.12;
+      filter:saturate(.8);
+      pointer-events:none;
+    }
+
+    body::after{
+      content:"";
+      position:fixed;
+      inset:0;
+      z-index:-1;
+      background:linear-gradient(180deg,rgba(3,8,15,.74),#050b13 76%);
+      pointer-events:none;
     }
 
     a{color:inherit}
@@ -95,6 +116,13 @@
       font-style:italic;
     }
 
+    .brand-mark img{
+      width:40px;
+      height:40px;
+      object-fit:contain;
+      filter:drop-shadow(0 0 10px rgba(19,140,255,.45));
+    }
+
     .brand-text small{
       display:block;
       color:var(--blue-2);
@@ -123,8 +151,15 @@
     .hero{
       position:relative;
       overflow:hidden;
+      min-height:540px;
+      display:grid;
+      place-items:center;
       padding:100px 0 78px;
       text-align:center;
+      border-bottom:1px solid rgba(88,184,255,.18);
+      background:
+        linear-gradient(180deg,rgba(2,7,14,.42),rgba(5,11,19,.96)),
+        url("imagens/capa.png") center 24% / cover no-repeat;
     }
 
     .hero::after{
@@ -140,6 +175,15 @@
       line-height:1;
       letter-spacing:-.12em;
       pointer-events:none;
+    }
+
+    .hero-icon{
+      width:clamp(92px,12vw,138px);
+      aspect-ratio:1;
+      margin:0 auto 18px;
+      object-fit:contain;
+      filter:drop-shadow(0 15px 24px rgba(0,0,0,.55))
+             drop-shadow(0 0 24px rgba(19,140,255,.38));
     }
 
     .eyebrow{
@@ -402,7 +446,11 @@
       .nav{min-height:68px}
       .brand-text{font-size:.86rem}
       .home-link{padding:9px 12px}
-      .hero{padding:76px 0 56px}
+      .hero{
+        min-height:500px;
+        padding:76px 0 56px;
+        background-position:center top;
+      }
       .section{padding-bottom:70px}
       .section-head{display:block}
       .section-head p{margin-top:12px}
@@ -417,7 +465,10 @@
   <header class="site-header">
     <div class="container nav">
       <a class="brand" href="https://flavim100.com.br/" aria-label="Voltar para a página inicial">
-        <span class="brand-mark">100</span>
+        <span class="brand-mark">
+          <img src="imagens/08-flavim-100.png" alt="" aria-hidden="true"
+               onerror="this.style.display='none';this.parentElement.textContent='100'">
+        </span>
         <span class="brand-text">
           Flavim Junior
           <small>Motocross</small>
@@ -430,6 +481,9 @@
   <main>
     <section class="hero">
       <div class="container">
+        <img class="hero-icon" src="imagens/icone-patrocinadores.png"
+             alt="Ícone de patrocinadores Flavim Junior 100"
+             onerror="this.style.display='none'">
         <p class="eyebrow">Parceiros oficiais</p>
         <h1>Quem acelera <span>com o Flavim</span></h1>
         <p class="hero-copy">
@@ -491,8 +545,8 @@
             <p class="sponsor-label">Marca parceira</p>
             <h3>Elite</h3>
             <p>
-              A identidade Elite integra o time de apoiadores do projeto Flavim Junior 100,
-              fortalecendo a presença das parcerias locais.
+              A marca Elite integra o time de apoiadores institucionais do projeto
+              Flavim Junior 100, fortalecendo a presença das parcerias locais.
             </p>
             <span class="neutral-badge">Parceiro Flavim 100</span>
           </article>
