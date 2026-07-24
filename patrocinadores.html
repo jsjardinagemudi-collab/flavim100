@@ -13,7 +13,7 @@
   <meta property="og:title" content="Patrocinadores • Flavim Junior 100">
   <meta property="og:description" content="As marcas que aceleram junto com o Flavim Junior 100.">
   <meta property="og:url" content="https://flavim100.com.br/patrocinadores.html">
-  <meta property="og:image" content="https://flavim100.com.br/imagens/capa.png">
+  <meta property="og:image" content="https://flavim100.com.br/imagens/capa-desktop-flavim100-v2.png">
 
   <style>
     :root{
@@ -49,7 +49,7 @@
       position:fixed;
       inset:0;
       z-index:-2;
-      background:url("imagens/capa.png") center top / cover no-repeat;
+      background:url("imagens/capa-desktop-flavim100-v2.png") center top / cover no-repeat;
       opacity:.12;
       filter:saturate(.8);
       pointer-events:none;
@@ -159,7 +159,7 @@
       border-bottom:1px solid rgba(88,184,255,.18);
       background:
         linear-gradient(180deg,rgba(2,7,14,.42),rgba(5,11,19,.96)),
-        url("imagens/capa.png") center 24% / cover no-repeat;
+        url("imagens/capa-desktop-flavim100-v2.png") center 24% / cover no-repeat;
     }
 
     .hero::after{
@@ -443,12 +443,20 @@
     }
 
     @media (max-width:760px){
+      body::before{
+        background-image:url("imagens/capa-mobile-flavim100-v2.png");
+        background-position:center top;
+      }
+
       .nav{min-height:68px}
       .brand-text{font-size:.86rem}
       .home-link{padding:9px 12px}
       .hero{
         min-height:500px;
         padding:76px 0 56px;
+        background-image:
+          linear-gradient(180deg,rgba(2,7,14,.42),rgba(5,11,19,.96)),
+          url("imagens/capa-mobile-flavim100-v2.png");
         background-position:center top;
       }
       .section{padding-bottom:70px}
@@ -503,7 +511,7 @@
         <div class="sponsor-grid">
           <article class="sponsor">
             <div class="logo-box">
-              <img src="imagens/logo-flavim-insulfilm.png"
+              <img src="imagens/flavin-insulfilm-patrocinador.png"
                    alt="Logomarca Flavim Insulfilm"
                    onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
               <span class="logo-fallback">Flavim Insulfilm</span>
@@ -519,16 +527,16 @@
 
           <article class="sponsor">
             <div class="logo-box">
-              <img src="imagens/logo-jardinagemudi.png"
-                   alt="Logomarca JardinagemUdi.com.br"
+              <img src="imagens/js-patrocinador.png"
+                   alt="Logomarca JS Jardinagem"
                    onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
               <span class="logo-fallback">JardinagemUdi.com.br</span>
             </div>
-            <p class="sponsor-label">Serviços e soluções</p>
-            <h3>JardinagemUdi.com.br</h3>
+            <p class="sponsor-label">Jardinagem em Uberlândia</p>
+            <h3>JS Jardinagem</h3>
             <p>
-              Plataforma de serviços em Uberlândia que conecta clientes e profissionais,
-              incentivando trabalho, oportunidade e desenvolvimento local.
+              Serviços de jardinagem rápidos e econômicos em toda Uberlândia,
+              com atendimento pelo JardinagemUdi.com.br.
             </p>
             <a class="card-link" href="https://jardinagemudi.com.br/" target="_blank" rel="noopener">
               Conhecer o site ↗
@@ -537,7 +545,7 @@
 
           <article class="sponsor">
             <div class="logo-box">
-              <img src="imagens/logo-elite.png"
+              <img src="imagens/elite-patrocinador.png"
                    alt="Logomarca Elite"
                    onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
               <span class="logo-fallback">◆ Elite</span>
@@ -553,7 +561,7 @@
 
           <article class="sponsor">
             <div class="logo-box">
-              <img src="imagens/logo-ecovida-horizontal.jpeg"
+              <img src="imagens/ecovida-patrocinador.png"
                    alt="Logomarca Instituto EcoVida"
                    onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
               <span class="logo-fallback">Instituto EcoVida</span>
