@@ -296,27 +296,29 @@
     }
 
     .logo-box{
-      display:grid;
-      place-items:center;
-      min-height:158px;
+      position:relative;
+      height:158px;
       margin-bottom:24px;
-      padding:22px;
+      overflow:hidden;
       border:1px solid rgba(255,255,255,.1);
       border-radius:19px;
-      background:
-        radial-gradient(circle at 50% 0%,rgba(19,140,255,.15),transparent 65%),
-        #f6f8fb;
+      background:#f6f8fb;
     }
 
     .logo-box img{
-      width:auto;
-      max-width:100%;
-      max-height:112px;
-      object-fit:contain;
+      display:block;
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      object-position:center;
     }
 
     .logo-fallback{
       display:none;
+      position:absolute;
+      inset:0;
+      place-items:center;
+      padding:22px;
       color:#08111d;
       text-align:center;
       font-size:1.45rem;
@@ -464,6 +466,7 @@
       .section-head p{margin-top:12px}
       .sponsor-grid{grid-template-columns:1fr}
       .sponsor{min-height:390px}
+      .logo-box{height:170px}
       .cta{padding:34px 25px}
     }
   </style>
