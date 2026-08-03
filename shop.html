@@ -1,47 +1,55 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#07162f">
-  <meta name="description" content="Flavim100: motos off-road, produtos recomendados, cursos, parceiros e oportunidades no motocross.">
-  <meta property="og:title" content="Flavim100 | Motocross, motos e parceiros">
-  <meta property="og:description" content="Encontre motos off-road, produtos recomendados, cursos, parceiros e oportunidades.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://flavim100.com.br/shop.html">
-  <meta property="og:image" content="https://flavim100.com.br/imagens/capa-flavim100-mobile.jpg">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Flavim100 | Motos, produtos e parceiros</title>
+  <title>Flavim100 Shop | Motos, produtos e parceiros</title>
+  <meta
+    name="description"
+    content="Loja virtual do Flavim Junior 100 com motos off-road, produtos recomendados, MX School, parceiros e oportunidades no motocross."
+  />
+
+  <link rel="canonical" href="https://flavim100.com.br/shop.html" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Flavim100 Shop" />
+  <meta
+    property="og:description"
+    content="Motos, produtos recomendados, parceiros e oportunidades no universo do motocross."
+  />
+  <meta property="og:url" content="https://flavim100.com.br/shop.html" />
+  <meta
+    property="og:image"
+    content="https://flavim100.com.br/imagens/capa-desktop-flavim100-v2.png"
+  />
+
+  <meta name="theme-color" content="#050505" />
 
   <style>
     :root {
-      --azul-950: #041022;
-      --azul-900: #07162f;
-      --azul-800: #0a2450;
-      --azul-700: #0d3f8f;
-      --azul-600: #1266d5;
-      --azul-500: #1685ff;
-      --azul-300: #83c4ff;
-      --branco: #ffffff;
-      --cinza-50: #f7f9fc;
-      --cinza-100: #edf1f7;
-      --cinza-300: #c6d0df;
-      --cinza-500: #77849a;
-      --cinza-700: #354057;
-      --preto: #07101e;
-      --verde: #29c76f;
-      --amarelo: #ffc928;
-      --vermelho: #ff4d5f;
-      --sombra: 0 18px 50px rgba(2, 12, 30, 0.2);
-      --raio: 24px;
-      --raio-menor: 16px;
-      --largura: 760px;
+      --dark: #050505;
+      --dark-2: #090909;
+      --dark-3: #111111;
+      --blue: #0057ff;
+      --blue-light: #38bdf8;
+      --white: #ffffff;
+      --gray: #c9c9c9;
+      --gray-2: #8d8d8d;
+      --card: rgba(255, 255, 255, 0.08);
+      --card-strong: rgba(255, 255, 255, 0.11);
+      --border: rgba(255, 255, 255, 0.16);
+      --whats: #25d366;
+      --yellow: #ffd43b;
+      --radius: 24px;
+      --shadow: 0 20px 55px rgba(0, 0, 0, 0.36);
+      --max: 1180px;
     }
 
     * {
-      box-sizing: border-box;
       margin: 0;
       padding: 0;
+      box-sizing: border-box;
     }
 
     html {
@@ -49,27 +57,12 @@
     }
 
     body {
-      min-height: 100vh;
-      font-family: Inter, Arial, Helvetica, sans-serif;
-      color: var(--branco);
+      font-family: Arial, Helvetica, sans-serif;
       background:
-        radial-gradient(circle at 15% 0%, rgba(22, 133, 255, 0.24), transparent 30%),
-        radial-gradient(circle at 95% 25%, rgba(18, 102, 213, 0.18), transparent 30%),
-        linear-gradient(180deg, var(--azul-950), #061a38 45%, #07162f);
+        radial-gradient(circle at top right, rgba(0, 87, 255, 0.16), transparent 28%),
+        var(--dark);
+      color: var(--white);
       overflow-x: hidden;
-    }
-
-    body::before {
-      content: "";
-      position: fixed;
-      inset: 0;
-      pointer-events: none;
-      opacity: 0.18;
-      background-image:
-        linear-gradient(rgba(255,255,255,.04) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(255,255,255,.04) 1px, transparent 1px);
-      background-size: 34px 34px;
-      mask-image: linear-gradient(to bottom, black, transparent 72%);
     }
 
     a {
@@ -86,1163 +79,1429 @@
       font: inherit;
     }
 
-    .pagina {
-      position: relative;
-      width: min(100%, var(--largura));
+    .container {
+      width: min(100%, var(--max));
       margin: 0 auto;
-      padding: 0 16px 110px;
+      padding-inline: 6%;
+    }
+
+    .topbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 100;
+      padding: 12px 5%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: rgba(0, 0, 0, 0.78);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      backdrop-filter: blur(12px);
+    }
+
+    .brand {
+      font-size: 15px;
+      font-weight: 950;
+      text-transform: uppercase;
+      letter-spacing: -0.3px;
+    }
+
+    .brand span {
+      color: var(--blue);
+    }
+
+    .top-actions {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .top-btn {
+      padding: 9px 11px;
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.09);
+      font-size: 12px;
+      font-weight: 900;
+      transition: 0.25s ease;
+    }
+
+    .top-btn:hover {
+      transform: translateY(-2px);
+      background: rgba(255, 255, 255, 0.15);
+    }
+
+    .top-btn.primary {
+      background: var(--blue);
+      border-color: var(--blue);
     }
 
     .hero {
+      min-height: 740px;
+      padding: 135px 6% 44px;
       position: relative;
-      min-height: 500px;
-      margin: 0 -16px;
-      padding: 22px 20px 34px;
       display: flex;
-      flex-direction: column;
-      justify-content: flex-end;
+      align-items: flex-end;
       overflow: hidden;
       background:
-        linear-gradient(180deg, rgba(2, 10, 25, 0.08), rgba(2, 10, 25, 0.35) 42%, rgba(4, 16, 34, 0.98)),
-        url("imagens/capa-flavim100-mobile.jpg") center 25% / cover no-repeat;
+        linear-gradient(180deg, rgba(0, 0, 0, 0.08), rgba(0, 0, 0, 0.94) 88%),
+        url("imagens/capa-mobile-flavim100-v2.png") center top / cover no-repeat;
     }
 
     .hero::after {
       content: "";
       position: absolute;
-      inset: auto 0 0;
-      height: 45%;
-      background: linear-gradient(transparent, var(--azul-950));
+      inset: 0;
+      background:
+        radial-gradient(circle at top right, rgba(0, 87, 255, 0.25), transparent 35%),
+        linear-gradient(90deg, rgba(0, 0, 0, 0.48), transparent 60%);
       pointer-events: none;
     }
 
-    .hero-topo,
-    .hero-conteudo {
+    .hero-content {
       position: relative;
       z-index: 2;
+      width: min(100%, 900px);
     }
 
-    .hero-topo {
-      position: absolute;
-      top: 18px;
-      left: 18px;
-      right: 18px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .marca-mini {
-      display: inline-flex;
-      align-items: center;
-      gap: 9px;
-      padding: 8px 12px;
-      border: 1px solid rgba(255,255,255,.18);
-      border-radius: 999px;
-      background: rgba(3, 16, 37, .58);
-      backdrop-filter: blur(10px);
-      font-weight: 900;
-      letter-spacing: .5px;
-    }
-
-    .marca-mini span {
-      color: var(--azul-300);
-    }
-
-    .botao-icone {
-      width: 43px;
-      height: 43px;
-      border: 1px solid rgba(255,255,255,.18);
-      border-radius: 50%;
-      display: grid;
-      place-items: center;
-      color: white;
-      background: rgba(3, 16, 37, .58);
-      backdrop-filter: blur(10px);
-      cursor: pointer;
-      transition: .2s ease;
-    }
-
-    .botao-icone:hover {
-      transform: translateY(-2px);
-      background: rgba(22, 133, 255, .75);
-    }
-
-    .perfil {
+    .profile-row {
       display: flex;
       align-items: center;
-      gap: 15px;
+      gap: 16px;
       margin-bottom: 18px;
     }
 
-    .avatar {
-      width: 82px;
-      height: 82px;
-      flex: 0 0 82px;
+    .profile-photo {
+      width: 84px;
+      height: 84px;
+      flex: 0 0 84px;
       padding: 3px;
       border-radius: 50%;
-      background: linear-gradient(135deg, var(--azul-300), var(--azul-600), var(--branco));
-      box-shadow: 0 8px 28px rgba(0,0,0,.32);
+      background: linear-gradient(135deg, var(--blue), var(--blue-light), #ffffff);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.45);
     }
 
-    .avatar img {
+    .profile-photo img {
       width: 100%;
       height: 100%;
-      border: 3px solid var(--azul-950);
+      border: 3px solid #050505;
       border-radius: 50%;
       object-fit: cover;
     }
 
-    .perfil-texto h1 {
-      font-size: clamp(1.75rem, 7vw, 2.5rem);
-      line-height: .95;
-      letter-spacing: -1.5px;
+    .profile-info small {
+      display: block;
+      margin-bottom: 5px;
+      color: #cfe0ff;
+      font-size: 11px;
+      font-weight: 950;
+      letter-spacing: 1.3px;
       text-transform: uppercase;
     }
 
-    .verificado {
-      display: inline-flex;
-      vertical-align: 4px;
-      margin-left: 4px;
-      color: var(--azul-300);
-      font-size: .7em;
+    .profile-info strong {
+      display: block;
+      font-size: clamp(23px, 6vw, 36px);
+      font-weight: 950;
+      line-height: 0.98;
+      text-transform: uppercase;
     }
 
-    .perfil-texto p {
+    .profile-info span {
+      display: block;
       margin-top: 7px;
-      color: #d5e5f8;
-      font-size: .95rem;
-      font-weight: 700;
+      color: #e4e4e4;
+      font-size: 14px;
+      font-weight: 800;
     }
 
-    .frase-hero {
-      max-width: 570px;
-      color: #e6eef9;
-      font-size: 1rem;
-      line-height: 1.55;
+    .badge {
+      display: inline-flex;
+      margin-bottom: 14px;
+      padding: 9px 14px;
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      border-radius: 999px;
+      color: #dbe8ff;
+      background: rgba(0, 87, 255, 0.22);
+      font-size: 12px;
+      font-weight: 900;
+      letter-spacing: 1px;
+      backdrop-filter: blur(10px);
     }
 
-    .social {
-      display: flex;
-      gap: 9px;
+    h1 {
+      max-width: 850px;
+      margin-bottom: 14px;
+      font-size: clamp(42px, 11vw, 88px);
+      font-weight: 950;
+      line-height: 0.92;
+      letter-spacing: -2px;
+      text-transform: uppercase;
+      text-shadow: 0 10px 30px rgba(0, 0, 0, 0.75);
+    }
+
+    h1 span {
+      color: var(--blue);
+    }
+
+    .subtitle {
+      max-width: 720px;
+      margin-bottom: 20px;
+      color: #ededed;
+      font-size: clamp(17px, 4.5vw, 23px);
+      line-height: 1.45;
+      text-shadow: 0 8px 22px rgba(0, 0, 0, 0.75);
+    }
+
+    .hero-buttons {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
       margin-top: 18px;
-      flex-wrap: wrap;
     }
 
-    .social a {
-      min-height: 42px;
-      padding: 10px 14px;
+    .btn {
+      min-height: 52px;
+      padding: 15px 16px;
       display: inline-flex;
       align-items: center;
+      justify-content: center;
       gap: 8px;
-      border: 1px solid rgba(255,255,255,.16);
-      border-radius: 999px;
-      background: rgba(255,255,255,.08);
-      font-size: .88rem;
-      font-weight: 800;
-      backdrop-filter: blur(8px);
-      transition: .2s ease;
-    }
-
-    .social a:hover {
-      background: var(--azul-600);
-      transform: translateY(-2px);
-    }
-
-    .atalhos {
-      position: relative;
-      z-index: 5;
-      margin-top: -10px;
-      padding: 12px 0 6px;
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 10px;
-    }
-
-    .atalho {
-      min-width: 0;
-      padding: 13px 6px 11px;
-      display: grid;
-      justify-items: center;
-      gap: 8px;
-      border: 1px solid rgba(255,255,255,.1);
-      border-radius: 18px;
-      background: linear-gradient(180deg, rgba(255,255,255,.1), rgba(255,255,255,.045));
-      box-shadow: 0 10px 30px rgba(0,0,0,.14);
-      text-align: center;
-      transition: .2s ease;
-    }
-
-    .atalho:hover {
-      transform: translateY(-4px);
-      border-color: rgba(131,196,255,.48);
-      background: rgba(18,102,213,.22);
-    }
-
-    .atalho-icone {
-      width: 44px;
-      height: 44px;
-      display: grid;
-      place-items: center;
-      border-radius: 14px;
-      background: linear-gradient(145deg, var(--azul-600), var(--azul-800));
-      font-size: 1.25rem;
-      box-shadow: inset 0 1px rgba(255,255,255,.22);
-    }
-
-    .atalho strong {
-      width: 100%;
-      overflow: hidden;
-      color: #eaf4ff;
-      font-size: .7rem;
-      line-height: 1.2;
-      text-overflow: ellipsis;
-    }
-
-    .bloco {
-      margin-top: 34px;
-    }
-
-    .titulo-area {
-      margin-bottom: 15px;
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-end;
-      gap: 16px;
-    }
-
-    .titulo-area small {
-      display: block;
-      margin-bottom: 4px;
-      color: var(--azul-300);
-      font-size: .72rem;
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      border-radius: 15px;
+      color: white;
+      background: rgba(255, 255, 255, 0.1);
       font-weight: 900;
-      letter-spacing: 1.7px;
+      text-align: center;
+      transition: 0.25s ease;
+      cursor: pointer;
+    }
+
+    .btn:hover {
+      transform: translateY(-3px);
+      filter: brightness(1.06);
+    }
+
+    .btn-primary {
+      border-color: transparent;
+      background: linear-gradient(135deg, var(--blue), var(--blue-light));
+    }
+
+    .btn-whats {
+      border-color: transparent;
+      background: var(--whats);
+    }
+
+    .btn-dark {
+      background: #0e0e0e;
+    }
+
+    section {
+      padding: 68px 0;
+    }
+
+    .section-head {
+      margin-bottom: 26px;
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 18px;
+    }
+
+    .section-kicker {
+      display: block;
+      margin-bottom: 8px;
+      color: #8fb5ff;
+      font-size: 12px;
+      font-weight: 950;
+      letter-spacing: 1.5px;
       text-transform: uppercase;
     }
 
-    .titulo-area h2 {
-      font-size: clamp(1.35rem, 5vw, 1.9rem);
-      line-height: 1.05;
-      letter-spacing: -.5px;
+    .section-title {
+      font-size: clamp(30px, 8vw, 54px);
+      font-weight: 950;
+      line-height: 1;
+      text-transform: uppercase;
     }
 
-    .ver-tudo {
+    .section-title span {
+      color: var(--blue);
+    }
+
+    .section-link {
       flex: 0 0 auto;
-      color: var(--azul-300);
-      font-size: .82rem;
-      font-weight: 900;
+      color: #9fc1ff;
+      font-size: 13px;
+      font-weight: 950;
+      text-transform: uppercase;
     }
 
-    .cards-scroll {
-      margin-right: -16px;
-      padding-right: 16px;
+    .section-text {
+      max-width: 860px;
+      margin-top: 14px;
+      color: var(--gray);
+      font-size: 17px;
+      line-height: 1.7;
+    }
+
+    .quick-links {
+      margin-top: -34px;
+      position: relative;
+      z-index: 10;
+    }
+
+    .quick-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 13px;
+    }
+
+    .quick-card {
+      min-height: 180px;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      background:
+        linear-gradient(145deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05)),
+        #080808;
+      box-shadow: var(--shadow);
+      transition: 0.25s ease;
+    }
+
+    .quick-card:hover {
+      transform: translateY(-5px);
+      border-color: rgba(0, 87, 255, 0.8);
+    }
+
+    .quick-icon {
+      width: 82px;
+      height: 82px;
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .quick-icon img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      filter: drop-shadow(0 10px 20px rgba(0, 87, 255, 0.27));
+      transition: 0.25s ease;
+    }
+
+    .quick-card:hover .quick-icon img {
+      transform: scale(1.06);
+      filter: drop-shadow(0 12px 24px rgba(0, 87, 255, 0.46));
+    }
+
+    .quick-card h3 {
+      margin-bottom: 7px;
+      font-size: 18px;
+      text-transform: uppercase;
+    }
+
+    .quick-card p {
+      color: #d3d3d3;
+      font-size: 13px;
+      line-height: 1.45;
+    }
+
+    .quick-link {
+      margin-top: 13px;
+      color: #8fb5ff;
+      font-size: 12px;
+      font-weight: 950;
+      text-transform: uppercase;
+    }
+
+    .motos-section {
+      background:
+        radial-gradient(circle at top right, rgba(0, 87, 255, 0.19), transparent 32%),
+        linear-gradient(180deg, #080808, #020202);
+    }
+
+    .horizontal-scroll {
+      padding-bottom: 8px;
       display: grid;
       grid-auto-flow: column;
-      grid-auto-columns: minmax(270px, 82%);
-      gap: 14px;
+      grid-auto-columns: minmax(280px, 82%);
+      gap: 15px;
       overflow-x: auto;
       scroll-snap-type: x mandatory;
       scrollbar-width: none;
     }
 
-    .cards-scroll::-webkit-scrollbar {
+    .horizontal-scroll::-webkit-scrollbar {
       display: none;
     }
 
-    .card {
-      position: relative;
+    .moto-card {
       overflow: hidden;
       scroll-snap-align: start;
-      border: 1px solid rgba(255,255,255,.1);
-      border-radius: var(--raio);
-      background: rgba(255,255,255,.07);
-      box-shadow: var(--sombra);
+      border: 1px solid var(--border);
+      border-radius: 26px;
+      background: var(--card);
+      box-shadow: var(--shadow);
     }
 
-    .card-imagem {
+    .moto-image {
       position: relative;
-      height: 250px;
+      height: 280px;
       overflow: hidden;
-      background: var(--azul-800);
+      background: #101010;
     }
 
-    .card-imagem img {
+    .moto-image img {
       width: 100%;
       height: 100%;
       object-fit: cover;
-      transition: transform .45s ease;
+      transition: 0.35s ease;
     }
 
-    .card:hover .card-imagem img {
+    .moto-card:hover .moto-image img {
       transform: scale(1.045);
     }
 
-    .selo {
+    .tag {
       position: absolute;
-      top: 13px;
-      left: 13px;
-      padding: 7px 10px;
+      top: 14px;
+      left: 14px;
+      padding: 8px 11px;
       border-radius: 999px;
-      color: var(--preto);
-      background: var(--amarelo);
-      font-size: .66rem;
+      color: #ffffff;
+      background: var(--blue);
+      font-size: 11px;
       font-weight: 950;
-      letter-spacing: .7px;
+      letter-spacing: 0.7px;
       text-transform: uppercase;
-      box-shadow: 0 8px 20px rgba(0,0,0,.18);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
     }
 
-    .selo.azul {
-      color: white;
-      background: var(--azul-600);
+    .tag.yellow {
+      color: #131313;
+      background: var(--yellow);
     }
 
-    .selo.verde {
-      color: #031d0d;
-      background: #6cff9b;
+    .moto-body {
+      padding: 19px;
     }
 
-    .card-corpo {
-      padding: 17px;
+    .moto-body h3 {
+      font-size: 22px;
+      line-height: 1.1;
+      text-transform: uppercase;
     }
 
-    .card-corpo h3 {
-      font-size: 1.15rem;
-      line-height: 1.2;
-    }
-
-    .meta {
-      margin-top: 8px;
+    .moto-meta {
+      margin-top: 10px;
       display: flex;
-      gap: 7px;
       flex-wrap: wrap;
+      gap: 7px;
     }
 
-    .meta span {
-      padding: 6px 8px;
-      border-radius: 8px;
-      color: #d6e7fb;
-      background: rgba(255,255,255,.07);
-      font-size: .7rem;
-      font-weight: 800;
+    .moto-meta span {
+      padding: 7px 9px;
+      border-radius: 9px;
+      color: #d9d9d9;
+      background: rgba(255, 255, 255, 0.08);
+      font-size: 11px;
+      font-weight: 900;
     }
 
-    .preco {
-      margin-top: 15px;
+    .moto-bottom {
+      margin-top: 18px;
       display: flex;
-      justify-content: space-between;
       align-items: center;
-      gap: 12px;
+      justify-content: space-between;
+      gap: 13px;
     }
 
-    .preco strong {
-      color: white;
-      font-size: 1.28rem;
-    }
-
-    .preco small {
+    .price strong {
       display: block;
-      margin-top: 2px;
-      color: var(--cinza-300);
-      font-size: .68rem;
+      font-size: 24px;
+      color: white;
     }
 
-    .botao {
+    .price small {
+      display: block;
+      margin-top: 4px;
+      color: #bdbdbd;
+      font-size: 11px;
+    }
+
+    .compact-btn {
       min-height: 44px;
       padding: 11px 14px;
       display: inline-flex;
-      justify-content: center;
       align-items: center;
-      gap: 8px;
-      border: 0;
+      justify-content: center;
       border-radius: 13px;
-      color: white;
-      background: linear-gradient(135deg, var(--azul-500), var(--azul-700));
-      font-weight: 900;
-      cursor: pointer;
-      box-shadow: 0 10px 25px rgba(18,102,213,.27);
-      transition: .2s ease;
+      background: linear-gradient(135deg, var(--blue), var(--blue-light));
+      font-size: 13px;
+      font-weight: 950;
     }
 
-    .botao:hover {
-      transform: translateY(-2px);
-      filter: brightness(1.08);
-    }
-
-    .botao.claro {
-      color: var(--azul-900);
-      background: white;
-      box-shadow: none;
-    }
-
-    .botao.whatsapp {
-      color: #03200e;
-      background: #5ff08c;
-      box-shadow: 0 10px 25px rgba(41,199,111,.18);
-    }
-
-    .grade-produtos {
+    .products-grid {
       display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 12px;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 13px;
     }
 
-    .produto {
-      min-width: 0;
+    .product-card {
       overflow: hidden;
-      border: 1px solid rgba(255,255,255,.1);
-      border-radius: 19px;
-      background: rgba(255,255,255,.065);
-      transition: .2s ease;
+      border: 1px solid var(--border);
+      border-radius: 22px;
+      background: var(--card);
+      transition: 0.25s ease;
     }
 
-    .produto:hover {
-      transform: translateY(-3px);
-      border-color: rgba(131,196,255,.43);
+    .product-card:hover {
+      transform: translateY(-5px);
+      border-color: rgba(0, 87, 255, 0.75);
     }
 
-    .produto img {
+    .product-image {
+      position: relative;
+      aspect-ratio: 1 / 0.88;
+      overflow: hidden;
+      background:
+        radial-gradient(circle, rgba(0, 87, 255, 0.2), transparent 65%),
+        #101010;
+    }
+
+    .product-image img {
       width: 100%;
-      aspect-ratio: 1 / .86;
+      height: 100%;
       object-fit: cover;
-      background: #dfe8f4;
     }
 
-    .produto-conteudo {
-      padding: 12px;
+    .choice-label {
+      position: absolute;
+      top: 11px;
+      left: 11px;
+      padding: 7px 9px;
+      border-radius: 999px;
+      color: white;
+      background: rgba(0, 87, 255, 0.92);
+      font-size: 9px;
+      font-weight: 950;
+      letter-spacing: 0.7px;
+      text-transform: uppercase;
     }
 
-    .produto-marca {
-      color: var(--azul-300);
-      font-size: .64rem;
-      font-weight: 900;
+    .product-body {
+      padding: 15px;
+    }
+
+    .product-category {
+      color: #8fb5ff;
+      font-size: 10px;
+      font-weight: 950;
       letter-spacing: 1px;
       text-transform: uppercase;
     }
 
-    .produto h3 {
-      min-height: 38px;
-      margin-top: 5px;
-      font-size: .92rem;
+    .product-body h3 {
+      min-height: 43px;
+      margin-top: 6px;
+      font-size: 17px;
       line-height: 1.2;
     }
 
-    .cupom {
-      margin-top: 10px;
-      padding: 9px;
-      border: 1px dashed rgba(131,196,255,.6);
+    .rating {
+      margin-top: 9px;
+      color: var(--yellow);
+      font-size: 13px;
+      letter-spacing: 1px;
+    }
+
+    .recommendation {
+      margin-top: 8px;
+      color: #cfcfcf;
+      font-size: 12px;
+      line-height: 1.45;
+    }
+
+    .coupon {
+      margin-top: 11px;
+      padding: 10px;
+      border: 1px dashed rgba(143, 181, 255, 0.65);
       border-radius: 11px;
-      color: #e9f5ff;
-      background: rgba(18,102,213,.14);
-      font-size: .71rem;
+      color: #e7f0ff;
+      background: rgba(0, 87, 255, 0.12);
+      font-size: 11px;
       text-align: center;
     }
 
-    .cupom strong {
-      color: var(--amarelo);
+    .coupon strong {
+      color: var(--yellow);
     }
 
-    .produto .botao {
+    .product-card .compact-btn {
       width: 100%;
-      min-height: 40px;
-      margin-top: 10px;
-      padding: 9px;
-      font-size: .78rem;
+      margin-top: 11px;
     }
 
-    .destaque {
+    .school-box {
       position: relative;
       overflow: hidden;
-      padding: 27px 22px;
-      border: 1px solid rgba(255,255,255,.14);
-      border-radius: var(--raio);
+      padding: 32px;
+      border: 1px solid var(--border);
+      border-radius: 30px;
       background:
-        linear-gradient(125deg, rgba(18,102,213,.96), rgba(5,29,66,.96)),
-        url("imagens/capa-mxschool.jpg") center / cover;
-      box-shadow: var(--sombra);
+        linear-gradient(125deg, rgba(0, 87, 255, 0.92), rgba(0, 0, 0, 0.92)),
+        url("imagens/02-mx-school.png") right center / 280px no-repeat;
+      box-shadow: var(--shadow);
     }
 
-    .destaque::after {
+    .school-box::after {
       content: "100";
       position: absolute;
-      right: -8px;
-      bottom: -38px;
-      color: rgba(255,255,255,.075);
-      font-size: 10rem;
+      right: -10px;
+      bottom: -48px;
+      color: rgba(255, 255, 255, 0.08);
+      font-size: 180px;
+      font-weight: 950;
       font-style: italic;
-      font-weight: 1000;
       line-height: 1;
     }
 
-    .destaque > * {
+    .school-content {
       position: relative;
       z-index: 2;
+      max-width: 680px;
     }
 
-    .destaque small {
-      color: #a9d5ff;
-      font-weight: 900;
-      letter-spacing: 1.5px;
+    .school-box h2 {
+      margin-top: 8px;
+      font-size: clamp(34px, 8vw, 62px);
+      line-height: 0.96;
       text-transform: uppercase;
     }
 
-    .destaque h2 {
-      max-width: 470px;
-      margin-top: 7px;
-      font-size: clamp(1.7rem, 7vw, 2.55rem);
-      line-height: .98;
-      letter-spacing: -1px;
+    .school-box p {
+      margin-top: 16px;
+      color: #eef5ff;
+      font-size: 17px;
+      line-height: 1.6;
     }
 
-    .destaque p {
-      max-width: 490px;
-      margin-top: 13px;
-      color: #deecff;
-      line-height: 1.5;
-    }
-
-    .destaque-acoes {
-      margin-top: 20px;
+    .school-actions {
+      margin-top: 23px;
       display: flex;
-      gap: 9px;
       flex-wrap: wrap;
-    }
-
-    .parceiros {
-      display: grid;
       gap: 10px;
     }
 
-    .parceiro {
-      min-height: 90px;
-      padding: 13px;
+    .partners-section {
+      background:
+        radial-gradient(circle at top right, rgba(0, 87, 255, 0.2), transparent 33%),
+        #080808;
+    }
+
+    .partners-list {
       display: grid;
-      grid-template-columns: 68px 1fr auto;
+      gap: 12px;
+    }
+
+    .partner-card {
+      min-height: 96px;
+      padding: 14px;
+      display: grid;
+      grid-template-columns: 74px 1fr auto;
       align-items: center;
-      gap: 13px;
-      border: 1px solid rgba(255,255,255,.1);
-      border-radius: 18px;
-      background: rgba(255,255,255,.06);
-      transition: .2s ease;
+      gap: 14px;
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      background: var(--card);
+      transition: 0.25s ease;
     }
 
-    .parceiro:hover {
-      transform: translateX(3px);
-      border-color: rgba(131,196,255,.45);
+    .partner-card:hover {
+      transform: translateX(4px);
+      border-color: rgba(0, 87, 255, 0.75);
     }
 
-    .parceiro-logo {
-      width: 68px;
-      height: 64px;
-      padding: 6px;
-      display: grid;
-      place-items: center;
-      overflow: hidden;
-      border-radius: 14px;
+    .partner-logo {
+      width: 74px;
+      height: 68px;
+      padding: 7px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 15px;
       background: white;
+      overflow: hidden;
     }
 
-    .parceiro-logo img {
+    .partner-logo img {
       width: 100%;
       height: 100%;
       object-fit: contain;
     }
 
-    .parceiro h3 {
-      font-size: .98rem;
+    .partner-card h3 {
+      font-size: 18px;
+      text-transform: uppercase;
     }
 
-    .parceiro p {
-      margin-top: 4px;
-      color: var(--cinza-300);
-      font-size: .75rem;
-      line-height: 1.35;
+    .partner-card p {
+      margin-top: 5px;
+      color: #cfcfcf;
+      font-size: 13px;
+      line-height: 1.45;
     }
 
-    .seta {
-      width: 34px;
-      height: 34px;
+    .partner-arrow {
+      width: 37px;
+      height: 37px;
       display: grid;
       place-items: center;
       border-radius: 50%;
-      background: rgba(255,255,255,.08);
-      font-size: 1.1rem;
+      background: rgba(255, 255, 255, 0.09);
+      font-size: 22px;
     }
 
-    .cta-anuncio {
-      padding: 22px;
+    .creator-section {
+      background:
+        linear-gradient(135deg, rgba(0, 87, 255, 0.25), rgba(255, 255, 255, 0.04)),
+        #050505;
+    }
+
+    .creator-box {
+      padding: 28px;
       display: grid;
-      gap: 17px;
-      border: 1px solid rgba(255,255,255,.12);
-      border-radius: var(--raio);
-      background: linear-gradient(145deg, rgba(255,255,255,.1), rgba(255,255,255,.045));
+      gap: 22px;
+      border: 1px solid var(--border);
+      border-radius: 30px;
+      background: rgba(255, 255, 255, 0.065);
+      box-shadow: var(--shadow);
     }
 
-    .cta-anuncio h2 {
-      font-size: 1.45rem;
+    .creator-icon {
+      width: 100px;
+      height: 100px;
     }
 
-    .cta-anuncio p {
-      margin-top: 6px;
-      color: var(--cinza-300);
-      line-height: 1.5;
+    .creator-icon img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      filter: drop-shadow(0 12px 24px rgba(0, 87, 255, 0.35));
     }
 
-    .cta-botoes {
+    .creator-box h2 {
+      font-size: clamp(31px, 8vw, 54px);
+      line-height: 1;
+      text-transform: uppercase;
+    }
+
+    .creator-box h2 span {
+      color: var(--blue);
+    }
+
+    .creator-box p {
+      margin-top: 13px;
+      color: #d4d4d4;
+      font-size: 16px;
+      line-height: 1.65;
+    }
+
+    .creator-points {
+      margin-top: 17px;
       display: grid;
-      grid-template-columns: 1fr 1fr;
       gap: 9px;
     }
 
-    .cta-botoes .botao {
-      width: 100%;
-      font-size: .82rem;
+    .creator-point {
+      padding: 13px 14px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 14px;
+      background: rgba(255, 255, 255, 0.055);
+      color: #efefef;
+      font-size: 14px;
+      font-weight: 800;
     }
 
-    footer {
-      padding: 38px 10px 15px;
-      color: var(--cinza-300);
+    .creator-actions {
+      display: grid;
+      gap: 10px;
+    }
+
+    .floating-whatsapp {
+      position: fixed;
+      left: 16px;
+      right: 16px;
+      bottom: 15px;
+      z-index: 120;
+      padding: 15px 18px;
+      border-radius: 999px;
+      color: white;
+      background: var(--whats);
+      box-shadow: 0 10px 34px rgba(0, 0, 0, 0.48);
+      font-weight: 950;
       text-align: center;
     }
 
-    footer strong {
-      color: white;
-    }
-
-    footer p {
-      margin-top: 8px;
-      font-size: .75rem;
-      line-height: 1.5;
-    }
-
-    .menu-fixo {
+    .notice {
       position: fixed;
-      z-index: 50;
       left: 50%;
-      bottom: max(13px, env(safe-area-inset-bottom));
-      width: min(calc(100% - 24px), 610px);
-      padding: 8px;
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 5px;
-      transform: translateX(-50%);
-      border: 1px solid rgba(255,255,255,.16);
-      border-radius: 20px;
-      background: rgba(4,16,34,.88);
-      box-shadow: 0 20px 60px rgba(0,0,0,.42);
-      backdrop-filter: blur(18px);
-    }
-
-    .menu-fixo a {
-      min-height: 51px;
-      display: grid;
-      place-items: center;
-      gap: 3px;
-      border-radius: 14px;
-      color: #c9d8eb;
-      font-size: .65rem;
-      font-weight: 800;
-      transition: .2s ease;
-    }
-
-    .menu-fixo a span {
-      font-size: 1.1rem;
-    }
-
-    .menu-fixo a:hover,
-    .menu-fixo a.ativo {
-      color: white;
-      background: var(--azul-700);
-    }
-
-    .aviso {
-      position: fixed;
-      z-index: 100;
-      left: 50%;
-      bottom: 92px;
-      width: min(calc(100% - 32px), 500px);
+      bottom: 90px;
+      z-index: 150;
+      width: min(calc(100% - 32px), 480px);
       padding: 13px 15px;
-      transform: translate(-50%, 20px);
       border-radius: 14px;
-      color: var(--azul-950);
+      color: #050505;
       background: white;
-      box-shadow: var(--sombra);
-      font-size: .82rem;
-      font-weight: 800;
+      box-shadow: var(--shadow);
+      font-size: 13px;
+      font-weight: 900;
       text-align: center;
       opacity: 0;
       pointer-events: none;
-      transition: .25s ease;
+      transform: translate(-50%, 18px);
+      transition: 0.25s ease;
     }
 
-    .aviso.mostrar {
+    .notice.show {
       opacity: 1;
       transform: translate(-50%, 0);
     }
 
-    @media (min-width: 700px) {
-      .pagina {
-        padding-left: 22px;
-        padding-right: 22px;
+    footer {
+      padding: 34px 6% 100px;
+      color: #999;
+      background: #030303;
+      font-size: 13px;
+      line-height: 1.6;
+      text-align: center;
+    }
+
+    @media (min-width: 820px) {
+      .topbar {
+        padding: 16px 7%;
+      }
+
+      .brand {
+        font-size: 18px;
+      }
+
+      .top-btn {
+        padding: 10px 14px;
+        font-size: 13px;
       }
 
       .hero {
-        min-height: 560px;
-        margin: 18px 0 0;
-        border-radius: 32px;
-        background-image:
-          linear-gradient(180deg, rgba(2, 10, 25, 0.04), rgba(2, 10, 25, 0.3) 42%, rgba(4, 16, 34, 0.98)),
-          url("imagens/capa-flavim100-pc.jpg");
+        min-height: 820px;
+        padding: 150px 7% 72px;
+        background:
+          linear-gradient(180deg, rgba(0, 0, 0, 0.08), rgba(0, 0, 0, 0.94) 88%),
+          url("imagens/capa-desktop-flavim100-v2.png") center center / cover no-repeat;
       }
 
-      .atalhos {
-        margin-top: 14px;
+      .hero-buttons {
+        display: flex;
+        flex-wrap: wrap;
       }
 
-      .cards-scroll {
-        margin-right: 0;
-        padding-right: 0;
-        grid-auto-columns: minmax(300px, 48%);
+      .hero-buttons .btn {
+        min-width: 190px;
       }
 
-      .grade-produtos {
-        grid-template-columns: repeat(4, minmax(0, 1fr));
+      .quick-grid {
+        grid-template-columns: repeat(4, 1fr);
       }
 
-      .cta-anuncio {
-        grid-template-columns: 1fr auto;
+      .horizontal-scroll {
+        grid-auto-columns: minmax(320px, 32%);
+      }
+
+      .products-grid {
+        grid-template-columns: repeat(4, 1fr);
+      }
+
+      .creator-box {
+        grid-template-columns: 120px 1fr 300px;
         align-items: center;
       }
 
-      .cta-botoes {
-        min-width: 285px;
+      .floating-whatsapp {
+        left: auto;
+        right: 22px;
+        bottom: 22px;
+        width: auto;
+        padding: 16px 22px;
+      }
+
+      footer {
+        padding-bottom: 36px;
       }
     }
 
-    @media (max-width: 390px) {
-      .atalhos {
-        gap: 7px;
+    @media (max-width: 520px) {
+      .top-actions .hide-mobile {
+        display: none;
       }
 
-      .atalho {
-        padding-left: 2px;
-        padding-right: 2px;
+      .hero {
+        min-height: 100vh;
+        padding: 140px 6% 90px;
       }
 
-      .atalho strong {
-        font-size: .63rem;
+      h1 {
+        font-size: clamp(40px, 13vw, 62px);
       }
 
-      .perfil {
-        align-items: flex-end;
-      }
-
-      .avatar {
+      .profile-photo {
         width: 72px;
         height: 72px;
         flex-basis: 72px;
       }
 
-      .cta-botoes {
-        grid-template-columns: 1fr;
+      .quick-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .quick-card {
+        min-height: 168px;
+        padding: 16px;
+      }
+
+      .quick-icon {
+        width: 68px;
+        height: 68px;
+      }
+
+      .products-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .partner-card {
+        grid-template-columns: 64px 1fr auto;
+      }
+
+      .partner-logo {
+        width: 64px;
+        height: 60px;
       }
     }
   </style>
 </head>
 
 <body>
-  <main class="pagina">
-    <section class="hero" id="inicio">
-      <div class="hero-topo">
-        <div class="marca-mini">FLAVIM<span>100</span></div>
+  <nav class="topbar">
+    <a
+      class="brand"
+      href="index.html"
+      aria-label="Voltar para a página inicial do Flavim Junior 100"
+    >
+      Flavim <span>Junior 100</span>
+    </a>
 
-        <button class="botao-icone" type="button" onclick="compartilharPagina()" aria-label="Compartilhar página">
-          ↗
-        </button>
-      </div>
+    <div class="top-actions">
+      <a class="top-btn hide-mobile" href="motosmx.html">Motos</a>
+      <a class="top-btn hide-mobile" href="patrocinadores.html">Parceiros</a>
+      <a class="top-btn primary" href="https://wa.me/553492430960" target="_blank" rel="noopener">
+        WhatsApp
+      </a>
+    </div>
+  </nav>
 
-      <div class="hero-conteudo">
-        <div class="perfil">
-          <div class="avatar">
-            <img src="imagens/flavim-perfil.jpg" alt="Flavim Junior 100">
-          </div>
+  <a
+    class="floating-whatsapp"
+    href="https://wa.me/553492430960?text=Olá%20Flavim!%20Vim%20pela%20loja%20virtual%20Flavim100."
+    target="_blank"
+    rel="noopener"
+  >
+    Falar com Flavim Junior 100
+  </a>
 
-          <div class="perfil-texto">
-            <h1>Flavim 100 <span class="verificado">●</span></h1>
-            <p>Piloto • Instrutor • Criador do mundo MX</p>
-          </div>
+  <header class="hero" id="inicio">
+    <div class="hero-content">
+      <div class="profile-row">
+        <div class="profile-photo">
+          <img src="imagens/08-flavim-100.png" alt="Flavim Junior 100" />
         </div>
 
-        <p class="frase-hero">
-          Sua próxima companheira da adrenalina te espera. Motos, equipamentos,
-          cursos, parceiros e oportunidades no motocross em um só lugar.
-        </p>
-
-        <div class="social">
-          <a href="https://www.instagram.com/eaiflavim/" target="_blank" rel="noopener">
-            ◎ Instagram
-          </a>
-          <a href="https://wa.me/5534992430960?text=Olá%20Flavim!%20Vim%20pelo%20site%20Flavim100." target="_blank" rel="noopener">
-            ◉ WhatsApp
-          </a>
-          <a href="patrocinadores.html">
-            ◆ Patrocinadores
-          </a>
+        <div class="profile-info">
+          <small>Loja oficial do piloto</small>
+          <strong>Flavim Junior 100</strong>
+          <span>Piloto • Instrutor • Criador de conteúdo MX</span>
         </div>
       </div>
-    </section>
 
-    <nav class="atalhos" aria-label="Acessos rápidos">
-      <a class="atalho" href="motosmx.html">
-        <span class="atalho-icone">🏍️</span>
-        <strong>Comprar moto</strong>
-      </a>
+      <div class="badge">MOTOCROSS • MOTOS • PRODUTOS • PARCEIROS</div>
 
-      <a class="atalho" href="anuncie-sua-moto.html">
-        <span class="atalho-icone">📣</span>
-        <strong>Anunciar moto</strong>
-      </a>
+      <h1>
+        Tudo do mundo
+        <span>MX em um só lugar.</span>
+      </h1>
 
-      <a class="atalho" href="mxschool.html">
-        <span class="atalho-icone">🏁</span>
-        <strong>MX School</strong>
-      </a>
+      <p class="subtitle">
+        Motos off-road, produtos recomendados, cursos, parceiros e oportunidades
+        escolhidas para quem vive a adrenalina do motocross.
+      </p>
 
-      <a class="atalho" href="#recomendados">
-        <span class="atalho-icone">⭐</span>
-        <strong>Recomendados</strong>
-      </a>
-    </nav>
+      <div class="hero-buttons">
+        <a class="btn btn-primary" href="#motos">Ver motos</a>
+        <a class="btn" href="#produtos">Produtos recomendados</a>
+        <a class="btn" href="mxschool.html">MX School</a>
+        <a class="btn btn-whats" href="https://wa.me/553492430960" target="_blank" rel="noopener">
+          Falar no WhatsApp
+        </a>
+      </div>
+    </div>
+  </header>
 
-    <section class="bloco" id="motos">
-      <div class="titulo-area">
+  <section class="quick-links">
+    <div class="container">
+      <div class="quick-grid">
+        <a class="quick-card" href="motosmx.html">
+          <div>
+            <div class="quick-icon">
+              <img src="imagens/01-motos-venda.png" alt="Ícone motos à venda" />
+            </div>
+            <h3>Motos à venda</h3>
+            <p>Veja as oportunidades disponíveis no universo off-road.</p>
+          </div>
+          <span class="quick-link">Ver motos</span>
+        </a>
+
+        <a class="quick-card" href="mxschool.html">
+          <div>
+            <div class="quick-icon">
+              <img src="imagens/02-mx-school.png" alt="Ícone MX School" />
+            </div>
+            <h3>MX School</h3>
+            <p>Cursos, técnica, evolução e segurança na pilotagem.</p>
+          </div>
+          <span class="quick-link">Conhecer</span>
+        </a>
+
+        <a class="quick-card" href="motopeças.html">
+          <div>
+            <div class="quick-icon">
+              <img src="imagens/03-motopecas.png" alt="Ícone motopeças" />
+            </div>
+            <h3>Produtos MX</h3>
+            <p>Equipamentos, peças e acessórios recomendados.</p>
+          </div>
+          <span class="quick-link">Ver produtos</span>
+        </a>
+
+        <a class="quick-card" href="anuncie-sua-moto.html">
+          <div>
+            <div class="quick-icon">
+              <img src="imagens/07-anuncie-moto.png" alt="Ícone anuncie sua moto" />
+            </div>
+            <h3>Anuncie sua moto</h3>
+            <p>Apresente sua moto para compradores interessados em MX.</p>
+          </div>
+          <span class="quick-link">Criar anúncio</span>
+        </a>
+
+        <a class="quick-card" href="procuro-uma-moto.html">
+          <div>
+            <div class="quick-icon">
+              <img src="imagens/06-procuro-moto.png" alt="Ícone procuro uma moto" />
+            </div>
+            <h3>Procuro uma moto</h3>
+            <p>Cadastre o modelo que procura e encontre oportunidades.</p>
+          </div>
+          <span class="quick-link">Procurar</span>
+        </a>
+
+        <a class="quick-card" href="galeria.html">
+          <div>
+            <div class="quick-icon">
+              <img src="imagens/05-galeria.png" alt="Ícone galeria" />
+            </div>
+            <h3>Galeria</h3>
+            <p>Treinos, corridas, vídeos, saltos e bastidores.</p>
+          </div>
+          <span class="quick-link">Assistir</span>
+        </a>
+
+        <a class="quick-card" href="patrocinadores.html">
+          <div>
+            <div class="quick-icon">
+              <img src="imagens/09-patrocionadores.png" alt="Ícone patrocinadores" />
+            </div>
+            <h3>Patrocinadores</h3>
+            <p>Conheça as marcas que aceleram junto com o Flavim.</p>
+          </div>
+          <span class="quick-link">Conhecer</span>
+        </a>
+
+        <a class="quick-card" href="#lojas-pilotos">
+          <div>
+            <div class="quick-icon">
+              <img src="imagens/13-parceiros.png" alt="Ícone loja para pilotos" />
+            </div>
+            <h3>Loja para pilotos</h3>
+            <p>Crie sua própria vitrine virtual dentro do Flavim100.</p>
+          </div>
+          <span class="quick-link">Saiba mais</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="motos-section" id="motos">
+    <div class="container">
+      <div class="section-head">
         <div>
-          <small>Vitrine MX</small>
-          <h2>Motos em destaque</h2>
+          <span class="section-kicker">Vitrine Flavim100</span>
+          <h2 class="section-title">Motos em <span>destaque</span></h2>
         </div>
-        <a class="ver-tudo" href="motosmx.html">Ver todas →</a>
+
+        <a class="section-link" href="motosmx.html">Ver todas →</a>
       </div>
 
-      <div class="cards-scroll">
-        <!-- MOTO 1 -->
-        <article class="card">
-          <div class="card-imagem">
-            <img src="imagens/item-008.jpg" alt="Husqvarna 65 ano 2022">
-            <span class="selo">Destaque</span>
+      <div class="horizontal-scroll">
+        <article class="moto-card">
+          <div class="moto-image">
+            <img src="imagens/item-008.jpg" alt="Husqvarna 65 ano 2022" />
+            <span class="tag yellow">Destaque</span>
           </div>
 
-          <div class="card-corpo">
+          <div class="moto-body">
             <h3>Husqvarna 65 • 2022</h3>
 
-            <div class="meta">
+            <div class="moto-meta">
               <span>Escape HGE</span>
               <span>Revisada</span>
               <span>Pneus novos</span>
             </div>
 
-            <div class="preco">
-              <div>
+            <div class="moto-bottom">
+              <div class="price">
                 <strong>R$ 31.000</strong>
                 <small>Contato direto com o vendedor</small>
               </div>
 
-              <a class="botao" href="motosmx.html">Ver moto</a>
+              <a class="compact-btn" href="motosmx.html">Ver moto</a>
             </div>
           </div>
         </article>
 
-        <!-- MOTO 2 -->
-        <article class="card">
-          <div class="card-imagem">
-            <img src="imagens/item-007.jpg" alt="Kawasaki KX 250 ano 2017">
-            <span class="selo azul">Aceita proposta</span>
+        <article class="moto-card">
+          <div class="moto-image">
+            <img src="imagens/item-007.jpg" alt="Kawasaki KX 250 ano 2017" />
+            <span class="tag">Aceita proposta</span>
           </div>
 
-          <div class="card-corpo">
+          <div class="moto-body">
             <h3>Kawasaki KX 250 • 2017</h3>
 
-            <div class="meta">
+            <div class="moto-meta">
               <span>250cc</span>
               <span>Off-road</span>
               <span>Item 007</span>
             </div>
 
-            <div class="preco">
-              <div>
+            <div class="moto-bottom">
+              <div class="price">
                 <strong>R$ 24.000</strong>
                 <small>Negociação com o vendedor</small>
               </div>
 
-              <a class="botao" href="motosmx.html">Ver moto</a>
+              <a class="compact-btn" href="motosmx.html">Ver moto</a>
             </div>
           </div>
         </article>
 
-        <!-- CHAMADA PARA ANÚNCIO -->
-        <article class="card">
-          <div class="card-imagem">
-            <img src="imagens/anuncie-sua-moto.jpg" alt="Anuncie sua moto no Flavim100">
-            <span class="selo verde">Venda mais rápido</span>
+        <article class="moto-card">
+          <div class="moto-image">
+            <img src="imagens/07-anuncie-moto.png" alt="Anuncie sua moto no Flavim100" />
+            <span class="tag">Sua moto aqui</span>
           </div>
 
-          <div class="card-corpo">
-            <h3>Tem uma moto para vender?</h3>
+          <div class="moto-body">
+            <h3>Venda sua moto no Flavim100</h3>
 
-            <div class="meta">
-              <span>Mais visibilidade</span>
+            <div class="moto-meta">
               <span>Público especializado</span>
+              <span>Mais visibilidade</span>
             </div>
 
-            <div class="preco">
-              <div>
-                <strong>Anuncie aqui</strong>
+            <div class="moto-bottom">
+              <div class="price">
+                <strong>Anuncie agora</strong>
                 <small>Cadastro simples e contato direto</small>
               </div>
 
-              <a class="botao" href="anuncie-sua-moto.html">Anunciar</a>
+              <a class="compact-btn" href="anuncie-sua-moto.html">Anunciar</a>
             </div>
           </div>
         </article>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section class="bloco" id="recomendados">
-      <div class="titulo-area">
+  <section id="produtos">
+    <div class="container">
+      <div class="section-head">
         <div>
-          <small>Escolhas do piloto</small>
-          <h2>Recomendados por Flavim100</h2>
+          <span class="section-kicker">Escolha do piloto</span>
+          <h2 class="section-title">Produtos que eu <span>recomendo</span></h2>
         </div>
       </div>
 
-      <div class="grade-produtos">
-        <!-- PRODUTO 1 -->
-        <article class="produto">
-          <img src="imagens/produto-capacete.jpg" alt="Capacete de motocross recomendado">
-          <div class="produto-conteudo">
-            <span class="produto-marca">Equipamentos</span>
+      <p class="section-text">
+        Espaço preparado para divulgar produtos usados, testados ou indicados pelo
+        Flavim Junior 100, com possibilidade de cupons, comissão e venda por parceiros.
+      </p>
+
+      <div class="products-grid">
+        <article class="product-card">
+          <div class="product-image">
+            <img src="imagens/produto-capacete.jpg" alt="Capacete de motocross recomendado" />
+            <span class="choice-label">Escolha do Flavim</span>
+          </div>
+
+          <div class="product-body">
+            <span class="product-category">Proteção</span>
             <h3>Capacetes MX selecionados</h3>
-            <div class="cupom">Cupom: <strong>FLAVIM100</strong></div>
-            <a class="botao" href="#" onclick="linkEmBreve(event)">Ver oferta</a>
+            <div class="rating">★★★★★</div>
+            <p class="recommendation">Segurança, conforto e presença dentro da pista.</p>
+            <div class="coupon">Cupom: <strong>FLAVIM100</strong></div>
+            <a class="compact-btn" href="#" onclick="linkEmBreve(event)">Ver oferta</a>
           </div>
         </article>
 
-        <!-- PRODUTO 2 -->
-        <article class="produto">
-          <img src="imagens/produto-oculos.jpg" alt="Óculos de motocross recomendado">
-          <div class="produto-conteudo">
-            <span class="produto-marca">Proteção</span>
+        <article class="product-card">
+          <div class="product-image">
+            <img src="imagens/produto-oculos.jpg" alt="Óculos de motocross recomendado" />
+            <span class="choice-label">Escolha do Flavim</span>
+          </div>
+
+          <div class="product-body">
+            <span class="product-category">Equipamento</span>
             <h3>Óculos para pista e trilha</h3>
-            <div class="cupom">Cupom: <strong>FLAVIM100</strong></div>
-            <a class="botao" href="#" onclick="linkEmBreve(event)">Ver oferta</a>
+            <div class="rating">★★★★★</div>
+            <p class="recommendation">Boa visão, proteção e encaixe durante a pilotagem.</p>
+            <div class="coupon">Cupom: <strong>FLAVIM100</strong></div>
+            <a class="compact-btn" href="#" onclick="linkEmBreve(event)">Ver oferta</a>
           </div>
         </article>
 
-        <!-- PRODUTO 3 -->
-        <article class="produto">
-          <img src="imagens/produto-luva.jpg" alt="Luva de motocross recomendada">
-          <div class="produto-conteudo">
-            <span class="produto-marca">Pilotagem</span>
-            <h3>Luvas escolhidas pelo Flavim</h3>
-            <div class="cupom">Cupom: <strong>FLAVIM100</strong></div>
-            <a class="botao" href="#" onclick="linkEmBreve(event)">Ver oferta</a>
+        <article class="product-card">
+          <div class="product-image">
+            <img src="imagens/produto-luva.jpg" alt="Luvas de motocross recomendadas" />
+            <span class="choice-label">Escolha do Flavim</span>
+          </div>
+
+          <div class="product-body">
+            <span class="product-category">Pilotagem</span>
+            <h3>Luvas MX recomendadas</h3>
+            <div class="rating">★★★★★</div>
+            <p class="recommendation">Controle, firmeza e conforto para acelerar melhor.</p>
+            <div class="coupon">Cupom: <strong>FLAVIM100</strong></div>
+            <a class="compact-btn" href="#" onclick="linkEmBreve(event)">Ver oferta</a>
           </div>
         </article>
 
-        <!-- PRODUTO 4 -->
-        <article class="produto">
-          <img src="imagens/produto-manutencao.jpg" alt="Produtos para manutenção de motos">
-          <div class="produto-conteudo">
-            <span class="produto-marca">Manutenção</span>
-            <h3>Cuidados essenciais para sua moto</h3>
-            <div class="cupom">Cupom: <strong>FLAVIM100</strong></div>
-            <a class="botao" href="#" onclick="linkEmBreve(event)">Ver oferta</a>
+        <article class="product-card">
+          <div class="product-image">
+            <img src="imagens/produto-manutencao.jpg" alt="Produtos de manutenção para moto" />
+            <span class="choice-label">Escolha do Flavim</span>
+          </div>
+
+          <div class="product-body">
+            <span class="product-category">Manutenção</span>
+            <h3>Cuidados essenciais para a moto</h3>
+            <div class="rating">★★★★★</div>
+            <p class="recommendation">Produtos para preservar desempenho e durabilidade.</p>
+            <div class="coupon">Cupom: <strong>FLAVIM100</strong></div>
+            <a class="compact-btn" href="#" onclick="linkEmBreve(event)">Ver oferta</a>
           </div>
         </article>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section class="bloco">
-      <div class="destaque">
-        <small>Flavim MX School 100</small>
-        <h2>Evolua sua pilotagem dentro e fora da pista.</h2>
-        <p>
-          Aulas, técnicas, posicionamento, controle da moto e acompanhamento
-          para pilotos que desejam desenvolver segurança e performance.
-        </p>
+  <section>
+    <div class="container">
+      <div class="school-box">
+        <div class="school-content">
+          <span class="section-kicker">Flavim MX School 100</span>
 
-        <div class="destaque-acoes">
-          <a class="botao claro" href="mxschool.html">Conhecer a escola</a>
-          <a class="botao whatsapp" href="https://wa.me/5534992430960?text=Olá%20Flavim!%20Quero%20informações%20sobre%20as%20aulas%20de%20motocross." target="_blank" rel="noopener">
-            Falar no WhatsApp
-          </a>
+          <h2>Evolua sua pilotagem.</h2>
+
+          <p>
+            Aulas, técnica, posicionamento, controle da moto e acompanhamento
+            para pilotos que desejam desenvolver segurança e desempenho.
+          </p>
+
+          <div class="school-actions">
+            <a class="btn btn-primary" href="mxschool.html">Conhecer a escola</a>
+
+            <a
+              class="btn btn-whats"
+              href="https://wa.me/553492430960?text=Olá%20Flavim!%20Quero%20informações%20sobre%20a%20MX%20School."
+              target="_blank"
+              rel="noopener"
+            >
+              Consultar vagas
+            </a>
+          </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section class="bloco" id="parceiros">
-      <div class="titulo-area">
+  <section class="partners-section" id="parceiros">
+    <div class="container">
+      <div class="section-head">
         <div>
-          <small>Quem acelera junto</small>
-          <h2>Parceiros e patrocinadores</h2>
+          <span class="section-kicker">Quem acelera junto</span>
+          <h2 class="section-title">Parceiros e <span>patrocinadores</span></h2>
         </div>
-        <a class="ver-tudo" href="patrocinadores.html">Conhecer →</a>
+
+        <a class="section-link" href="patrocinadores.html">Conhecer →</a>
       </div>
 
-      <div class="parceiros">
-        <a class="parceiro" href="https://www.instagram.com/" target="_blank" rel="noopener">
-          <div class="parceiro-logo">
-            <img src="imagens/logo-flavim-insulfilm.png" alt="Flavim Insulfilm">
+      <div class="partners-list">
+        <a class="partner-card" href="https://www.instagram.com/eaiflavim" target="_blank" rel="noopener">
+          <div class="partner-logo">
+            <img src="imagens/logo-flavim-insulfilm.png" alt="Flavim Insulfilm" />
           </div>
+
           <div>
             <h3>Flavim Insulfilm</h3>
             <p>Proteção, estilo e atendimento especializado em Uberlândia.</p>
           </div>
-          <span class="seta">›</span>
+
+          <span class="partner-arrow">›</span>
         </a>
 
-        <a class="parceiro" href="elite.html">
-          <div class="parceiro-logo">
-            <img src="imagens/logo-elite-dryice.png" alt="Elite DryIce">
+        <a class="partner-card" href="elite.html">
+          <div class="partner-logo">
+            <img src="imagens/logo-elite-dryice.png" alt="Elite DryIce" />
           </div>
+
           <div>
             <h3>Elite DryIce</h3>
             <p>Itens que facilitam o dia a dia sem perder a personalidade.</p>
           </div>
-          <span class="seta">›</span>
+
+          <span class="partner-arrow">›</span>
         </a>
 
-        <a class="parceiro" href="https://jardinagemudi.com.br/" target="_blank" rel="noopener">
-          <div class="parceiro-logo">
-            <img src="imagens/logo-js-jardinagem.png" alt="JS Jardinagem">
+        <a class="partner-card" href="https://jardinagemudi.com.br/" target="_blank" rel="noopener">
+          <div class="partner-logo">
+            <img src="imagens/logo-js-jardinagem.png" alt="JS Jardinagem" />
           </div>
+
           <div>
             <h3>JS Jardinagem</h3>
             <p>Serviços de jardinagem para toda Uberlândia.</p>
           </div>
-          <span class="seta">›</span>
+
+          <span class="partner-arrow">›</span>
         </a>
 
-        <a class="parceiro" href="https://jardinagemudi.com.br/ecovida.html" target="_blank" rel="noopener">
-          <div class="parceiro-logo">
-            <img src="imagens/logo-ecovida-horizontal.jpeg" alt="Instituto EcoVida">
+        <a
+          class="partner-card"
+          href="https://jardinagemudi.com.br/ecovida.html"
+          target="_blank"
+          rel="noopener"
+        >
+          <div class="partner-logo">
+            <img src="imagens/logo-ecovida-horizontal.jpeg" alt="Instituto EcoVida" />
           </div>
+
           <div>
             <h3>Instituto EcoVida</h3>
             <p>Reciclagem, inclusão social e transformação comunitária.</p>
           </div>
-          <span class="seta">›</span>
+
+          <span class="partner-arrow">›</span>
         </a>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section class="bloco">
-      <div class="cta-anuncio">
-        <div>
-          <h2>Faça parte do ecossistema Flavim100</h2>
-          <p>
-            Divulgue sua moto, sua empresa ou seu produto para uma comunidade
-            conectada ao motocross e ao universo off-road.
-          </p>
+  <section class="creator-section" id="lojas-pilotos">
+    <div class="container">
+      <div class="creator-box">
+        <div class="creator-icon">
+          <img src="imagens/13-parceiros.png" alt="Ícone loja para pilotos" />
         </div>
 
-        <div class="cta-botoes">
-          <a class="botao" href="anuncie-sua-moto.html">Anunciar moto</a>
-          <a class="botao whatsapp" href="https://wa.me/5534992430960?text=Olá%20Flavim!%20Quero%20divulgar%20minha%20marca%20ou%20produto%20no%20Flavim100." target="_blank" rel="noopener">
-            Divulgar marca
+        <div>
+          <span class="section-kicker">Nova oportunidade Flavim100</span>
+
+          <h2>
+            Sua própria <span>loja virtual de piloto.</span>
+          </h2>
+
+          <p>
+            O Flavim100 poderá criar vitrines personalizadas para outros pilotos,
+            influenciadores, escolas e profissionais do motocross venderem produtos,
+            divulgarem parceiros e indicarem equipamentos.
+          </p>
+
+          <div class="creator-points">
+            <div class="creator-point">Página própria com nome, foto e identidade do piloto</div>
+            <div class="creator-point">Produtos, motos, parceiros, cupons e links de venda</div>
+            <div class="creator-point">Contato direto pelo WhatsApp e Instagram</div>
+            <div class="creator-point">Possibilidade de comissão por vendas e indicações</div>
+          </div>
+        </div>
+
+        <div class="creator-actions">
+          <a
+            class="btn btn-primary"
+            href="https://wa.me/553492430960?text=Olá%20Flavim!%20Tenho%20interesse%20em%20criar%20uma%20loja%20virtual%20para%20piloto%20dentro%20do%20Flavim100."
+            target="_blank"
+            rel="noopener"
+          >
+            Quero minha loja
+          </a>
+
+          <a class="btn btn-dark" href="patrocinio.html">
+            Divulgar minha marca
           </a>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <footer>
-      <strong>Flavim100.com.br</strong>
-      <p>
-        Plataforma especializada em motocross, motos off-road, divulgação,
-        cursos e conexão direta entre pilotos, vendedores e parceiros.
-      </p>
-      <p>© <span id="ano"></span> Flavim100. Todos os direitos reservados.</p>
-    </footer>
-  </main>
+  <footer>
+    Flavim Junior 100 • Motocross • Motos • Produtos • Parceiros • MX School
+    <br />
+    <a href="https://flavim100.com.br/">flavim100.com.br</a>
+    • Instagram: @eaiflavim
+    • WhatsApp: 34 9243-0960
+  </footer>
 
-  <nav class="menu-fixo" aria-label="Menu principal">
-    <a class="ativo" href="#inicio">
-      <span>⌂</span>
-      Início
-    </a>
-    <a href="motosmx.html">
-      <span>🏍</span>
-      Motos
-    </a>
-    <a href="#recomendados">
-      <span>★</span>
-      Produtos
-    </a>
-    <a href="https://wa.me/5534992430960?text=Olá%20Flavim!%20Vim%20pelo%20site%20Flavim100." target="_blank" rel="noopener">
-      <span>◉</span>
-      Contato
-    </a>
-  </nav>
-
-  <div class="aviso" id="aviso" role="status" aria-live="polite"></div>
+  <div class="notice" id="notice" role="status" aria-live="polite"></div>
 
   <script>
-    document.getElementById("ano").textContent = new Date().getFullYear();
+    function showNotice(message) {
+      const notice = document.getElementById("notice");
+      notice.textContent = message;
+      notice.classList.add("show");
 
-    function mostrarAviso(mensagem) {
-      const aviso = document.getElementById("aviso");
-      aviso.textContent = mensagem;
-      aviso.classList.add("mostrar");
+      window.clearTimeout(window.noticeTimer);
 
-      window.clearTimeout(window.timerAviso);
-      window.timerAviso = window.setTimeout(() => {
-        aviso.classList.remove("mostrar");
+      window.noticeTimer = window.setTimeout(function () {
+        notice.classList.remove("show");
       }, 2600);
     }
 
     function linkEmBreve(event) {
       event.preventDefault();
-      mostrarAviso("Oferta em preparação. Substitua o # pelo link do parceiro.");
+      showNotice("Oferta em preparação. Depois substitua o # pelo link do parceiro.");
     }
-
-    async function compartilharPagina() {
-      const dados = {
-        title: "Flavim100",
-        text: "Confira motos, produtos, cursos e parceiros do Flavim100.",
-        url: window.location.href
-      };
-
-      try {
-        if (navigator.share) {
-          await navigator.share(dados);
-        } else {
-          await navigator.clipboard.writeText(window.location.href);
-          mostrarAviso("Link copiado!");
-        }
-      } catch (erro) {
-        if (erro.name !== "AbortError") {
-          mostrarAviso("Não foi possível compartilhar agora.");
-        }
-      }
-    }
-
-    const secoes = document.querySelectorAll("section[id]");
-    const linksMenu = document.querySelectorAll(".menu-fixo a[href^='#']");
-
-    const observador = new IntersectionObserver((entradas) => {
-      entradas.forEach((entrada) => {
-        if (!entrada.isIntersecting) return;
-
-        linksMenu.forEach((link) => link.classList.remove("ativo"));
-        const ativo = document.querySelector(`.menu-fixo a[href="#${entrada.target.id}"]`);
-        if (ativo) ativo.classList.add("ativo");
-      });
-    }, {
-      rootMargin: "-40% 0px -50% 0px",
-      threshold: 0
-    });
-
-    secoes.forEach((secao) => observador.observe(secao));
   </script>
 </body>
 </html>
