@@ -4,10 +4,10 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Flavim100 Shop | Motos, produtos e parceiros</title>
+  <title>Flavim100 Shop V3 | Motos, Produtos e Parceiros MX</title>
   <meta
     name="description"
-    content="Loja virtual do Flavim Junior com motos off-road, produtos recomendados, MX School, parceiros e oportunidades no motocross."
+    content="Loja virtual do Flavim Junior 100 com motos off-road, produtos recomendados, MX School, parceiros e oportunidades no motocross."
   />
 
   <link rel="canonical" href="https://flavim100.com.br/shop.html" />
@@ -25,6 +25,7 @@
   />
 
   <meta name="theme-color" content="#050505" />
+  <meta name="robots" content="index, follow" />
 
   <style>
     :root {
@@ -112,18 +113,23 @@
     }
 
     .top-actions {
+      min-width: 0;
       display: flex;
+      justify-content: flex-end;
       align-items: center;
       gap: 8px;
+      flex-wrap: wrap;
     }
 
     .top-btn {
+      flex: 0 0 auto;
       padding: 9px 11px;
       border: 1px solid rgba(255, 255, 255, 0.14);
       border-radius: 999px;
       background: rgba(255, 255, 255, 0.09);
       font-size: 12px;
       font-weight: 900;
+      white-space: nowrap;
       transition: 0.25s ease;
     }
 
@@ -133,8 +139,14 @@
     }
 
     .top-btn.primary {
-      background: var(--blue);
-      border-color: var(--blue);
+      background: linear-gradient(135deg, var(--blue), var(--blue-light));
+      border-color: transparent;
+      box-shadow: 0 8px 22px rgba(0, 87, 255, 0.25);
+    }
+
+    .top-btn.whats {
+      background: var(--whats);
+      border-color: transparent;
     }
 
     .hero {
@@ -420,7 +432,7 @@
       text-transform: uppercase;
     }
 
-    .s-section {
+    .motos-section {
       background:
         radial-gradient(circle at top right, rgba(0, 87, 255, 0.19), transparent 32%),
         linear-gradient(180deg, #080808, #020202);
@@ -441,7 +453,7 @@
       display: none;
     }
 
-    .-card {
+    .moto-card {
       overflow: hidden;
       scroll-snap-align: start;
       border: 1px solid var(--border);
@@ -450,21 +462,21 @@
       box-shadow: var(--shadow);
     }
 
-    .-image {
+    .moto-image {
       position: relative;
       height: 280px;
       overflow: hidden;
       background: #101010;
     }
 
-    .-image img {
+    .moto-image img {
       width: 100%;
       height: 100%;
       object-fit: cover;
       transition: 0.35s ease;
     }
 
-    .-card:hover .-image img {
+    .moto-card:hover .moto-image img {
       transform: scale(1.045);
     }
 
@@ -488,24 +500,24 @@
       background: var(--yellow);
     }
 
-    .-body {
+    .moto-body {
       padding: 19px;
     }
 
-    .-body h3 {
+    .moto-body h3 {
       font-size: 22px;
       line-height: 1.1;
       text-transform: uppercase;
     }
 
-    .-meta {
+    .moto-meta {
       margin-top: 10px;
       display: flex;
       flex-wrap: wrap;
       gap: 7px;
     }
 
-    .-meta span {
+    .moto-meta span {
       padding: 7px 9px;
       border-radius: 9px;
       color: #d9d9d9;
@@ -514,7 +526,7 @@
       font-weight: 900;
     }
 
-    .-bottom {
+    .moto-bottom {
       margin-top: 18px;
       display: flex;
       align-items: center;
@@ -944,8 +956,18 @@
       }
     }
 
-    @media (max-width: 520px) {
+    @media (max-width: 720px) {
       .top-actions .hide-mobile {
+        display: none;
+      }
+
+      .topbar {
+        gap: 10px;
+      }
+    }
+
+    @media (max-width: 520px) {
+      .top-btn.whats {
         display: none;
       }
 
@@ -1005,9 +1027,11 @@
     </a>
 
     <div class="top-actions">
-      <a class="top-btn hide-mobile" href="smx.html">s</a>
+      <a class="top-btn primary" href="shop.html">Loja MX</a>
+      <a class="top-btn hide-mobile" href="motosmx.html">Motos</a>
+      <a class="top-btn hide-mobile" href="mxschool.html">MX School</a>
       <a class="top-btn hide-mobile" href="patrocinadores.html">Parceiros</a>
-      <a class="top-btn primary" href="https://wa.me/553492430960" target="_blank" rel="noopener">
+      <a class="top-btn whats" href="https://wa.me/553492430960" target="_blank" rel="noopener">
         WhatsApp
       </a>
     </div>
@@ -1019,14 +1043,14 @@
     target="_blank"
     rel="noopener"
   >
-    Falar com Flavim Junior
+    Falar com Flavim Junior 100
   </a>
 
   <header class="hero" id="inicio">
     <div class="hero-content">
       <div class="profile-row">
         <div class="profile-photo">
-          <img src="imagens/08-flavim-100.png" alt="Flavim Junior" />
+          <img src="imagens/08-flavim-100.png" alt="Flavim Junior 100" />
         </div>
 
         <div class="profile-info">
@@ -1256,7 +1280,7 @@
 
       <p class="section-text">
         Espaço preparado para divulgar produtos usados, testados ou indicados pelo
-        Flavim Junior, com possibilidade de cupons, comissão e venda por parceiros.
+        Flavim Junior 100, com possibilidade de cupons, comissão e venda por parceiros.
       </p>
 
       <div class="products-grid">
@@ -1369,7 +1393,7 @@
       </div>
 
       <div class="partners-list">
-        <a class="partner-card" href="https://www.instagram.com/eaiflavim" target="_blank" rel="noopener">
+        <a class="partner-card" href="patrocinadores.html">
           <div class="partner-logo">
             <img src="/imagens/flavin-insulfilm-patrocinador.png" alt="Flavim Insulfilm" />
           </div>
@@ -1415,7 +1439,7 @@
           rel="noopener"
         >
           <div class="partner-logo">
-            <img src="logo-ecovida-principal.jpg" alt="Instituto EcoVida" />
+            <img src="imagens/logo-ecovida-principal.jpg" alt="Instituto EcoVida" />
           </div>
 
           <div>
@@ -1478,7 +1502,10 @@
   <footer>
     Flavim Junior 100 • Motocross • Motos • Produtos • Parceiros • MX School
     <br />
-    <a href="https://flavim100.com.br/">flavim100.com.br</a>
+    <a href="index.html">Início</a>
+    • <a href="shop.html">Loja MX</a>
+    • <a href="motosmx.html">Motos</a>
+    • <a href="patrocinadores.html">Parceiros</a>
     • Instagram: @eaiflavim
     • WhatsApp: 34 9243-0960
   </footer>
