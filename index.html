@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Flavim Junior 100 | Motocross, Motos e Loja MX</title>
+  <title>Flavim Junior 100 V3 | Motocross, Loja MX e Motos</title>
   <meta name="description" content="Portal oficial do Flavim Junior 100: motocross, MX School, motos off-road, loja MX, produtos recomendados, galeria e patrocínios." />
   <link rel="canonical" href="https://flavim100.com.br/" />
   <meta property="og:type" content="website" />
@@ -59,18 +59,24 @@
     .brand span { color: var(--blue); }
 
     .top-actions {
+      min-width: 0;
       display: flex;
+      justify-content: flex-end;
       gap: 8px;
       align-items: center;
+      flex-wrap: wrap;
     }
 
     .top-btn {
+      flex: 0 0 auto;
       font-size: 12px;
       font-weight: 900;
-      padding: 9px 11px;
+      padding: 9px 12px;
       border-radius: 999px;
       background: rgba(255,255,255,.09);
       border: 1px solid rgba(255,255,255,.14);
+      white-space: nowrap;
+      overflow: visible;
     }
 
     .top-btn.primary {
@@ -572,13 +578,16 @@
 <body>
 
   <nav class="topbar">
-    <a class="brand" href="https://flavim100.com.br/" aria-label="Voltar para a página inicial do Flavim Junior 100">Flavim <span>Junior 100</span></a>
+    <a class="brand" href="index.html" aria-label="Página inicial do Flavim Junior 100">
+      Flavim <span>Junior 100</span>
+    </a>
 
     <div class="top-actions">
       <a class="top-btn shop" href="shop.html">Loja MX</a>
-      <a class="top-btn hide-mobile" href="patrocinadores.html">Patrocinadores</a>
-      <a class="top-btn hide-mobile" href="https://www.instagram.com/eaiflavim" target="_blank">@eaiflavim</a>
-      <a class="top-btn primary" href="https://wa.me/553492430960" target="_blank">WhatsApp</a>
+      <a class="top-btn hide-mobile" href="motosmx.html">Motos</a>
+      <a class="top-btn hide-mobile" href="mxschool.html">MX School</a>
+      <a class="top-btn hide-mobile" href="patrocinadores.html">Parceiros</a>
+      <a class="top-btn primary" href="https://wa.me/553492430960" target="_blank" rel="noopener">WhatsApp</a>
     </div>
   </nav>
 
@@ -588,24 +597,22 @@
 
   <header id="home" class="hero">
     <div class="hero-content">
-      <div class="badge">PILOTO • INSTRUTOR • MOTOCROSS • Nº 100</div>
+      <div class="badge">PILOTO • INSTRUTOR • LOJA MX • Nº 100</div>
 
-      <h1>Flavim<br>Junior <span></span></h1>
+      <h1>Motocross, motos e <span>oportunidades MX.</span></h1>
 
       <p class="subtitle">
-        Disciplina, técnica, foco e superação dentro e fora das pistas.
-        Piloto de motocross, instrutor e criador da Flavim MX School 100. Agora também com loja MX, produtos recomendados e vitrines para pilotos.
+        Conteúdo, cursos, motos off-road, produtos recomendados, parceiros
+        e lojas virtuais para pilotos em um só lugar.
       </p>
 
       <div class="hero-buttons">
-        <a href="#portal" class="btn btn-primary">Conhecer projeto</a>
+        <a href="shop.html" class="btn btn-primary">Entrar na Loja MX</a>
+        <a href="motosmx.html" class="btn btn-secondary">Ver motos</a>
         <a href="mxschool.html" class="btn btn-secondary">MX School</a>
-        <a href="shop.html" class="btn btn-primary">Loja MX</a>
-        <a href="motopeças.html" class="btn btn-secondary">Peças</a>
-        <a href="motosmx.html" class="btn btn-secondary">Motos MX</a>
+        <a href="anuncie-sua-moto.html" class="btn btn-secondary">Anunciar moto</a>
         <a href="patrocinadores.html" class="btn btn-secondary">Patrocinadores</a>
-        <a href="patrocinio.html" class="btn btn-secondary">Patrocínio</a>
-        <a href="galeria.html" class="btn btn-secondary">Galeria</a>
+        <a href="galeria.html" class="btn btn-secondary">Vídeos e galeria</a>
       </div>
 
       <div class="quick-stats">
@@ -615,6 +622,52 @@
       </div>
     </div>
   </header>
+
+  <section class="portal" id="destaques-v3">
+    <h2 class="section-title">Flavim100 <span>V3.0</span></h2>
+    <p class="section-text">
+      Um hub especializado em motocross para comprar e anunciar motos,
+      descobrir produtos recomendados, acompanhar conteúdo e criar lojas virtuais para pilotos.
+    </p>
+
+    <div class="portal-grid">
+      <a class="portal-card" href="shop.html">
+        <div>
+          <div class="portal-icon"><img src="imagens/03-motopecas.png" alt="Ícone Loja MX"></div>
+          <h3>Loja MX</h3>
+          <p>Produtos recomendados, cupons, parceiros e oportunidades selecionadas.</p>
+        </div>
+        <span class="portal-link">Comprar e conhecer</span>
+      </a>
+
+      <a class="portal-card" href="motosmx.html">
+        <div>
+          <div class="portal-icon"><img src="imagens/01-motos-venda.png" alt="Ícone Motos à venda"></div>
+          <h3>Vitrine de motos</h3>
+          <p>Motos off-road anunciadas com contato direto com o vendedor.</p>
+        </div>
+        <span class="portal-link">Ver oportunidades</span>
+      </a>
+
+      <a class="portal-card" href="mxschool.html">
+        <div>
+          <div class="portal-icon"><img src="imagens/02-mx-school.png" alt="Ícone MX School"></div>
+          <h3>MX School</h3>
+          <p>Cursos, técnica, segurança e evolução para pilotos.</p>
+        </div>
+        <span class="portal-link">Consultar cursos</span>
+      </a>
+
+      <a class="portal-card" href="shop.html#lojas-pilotos">
+        <div>
+          <div class="portal-icon"><img src="imagens/13-parceiros.png" alt="Ícone Loja para pilotos"></div>
+          <h3>Loja para pilotos</h3>
+          <p>Vitrines personalizadas para pilotos venderem e indicarem produtos.</p>
+        </div>
+        <span class="portal-link">Conhecer o modelo</span>
+      </a>
+    </div>
+  </section>
 
   <section id="portal" class="portal">
     <h2 class="section-title">Portal <span>oficial</span></h2>
@@ -819,7 +872,7 @@
   </section>
 
   <section class="cta">
-    <h2>Vamos acelerar juntos?</h2>
+    <h2>Entre no ecossistema Flavim100</h2>
 
     <p>
       Fale com Flavim Junior 100 para curso de motocross, parceria,
@@ -843,7 +896,12 @@
 
   <footer>
     Flavim Junior 100 • Motocross • MX School • Loja MX • Motos • Patrocínios<br>
-    <a href="https://flavim100.com.br/">flavim100.com.br</a> • Instagram: @eaiflavim • WhatsApp: 34 9243-0960
+    <a href="index.html">Início</a> •
+    <a href="shop.html">Loja MX</a> •
+    <a href="motosmx.html">Motos</a> •
+    <a href="patrocinadores.html">Patrocinadores</a> •
+    <a href="https://www.instagram.com/eaiflavim" target="_blank" rel="noopener">@eaiflavim</a><br>
+    WhatsApp: 34 9243-0960
   </footer>
 
 </body>
